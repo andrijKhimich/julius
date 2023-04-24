@@ -1,39 +1,17 @@
 @font-face {
-  font-family: 'Raleway';
-  src: url('../fonts/Raleway-Bold.woff') format('woff');
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Raleway';
-  src: url('../fonts/Raleway-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Raleway';
-  src: url('../fonts/Raleway-Regular.woff') format('woff');
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+    url('../fonts/OpenSans-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
-  font-family: 'Raleway';
-  src: url('../fonts/Raleway-Light.woff') format('woff');
-  font-weight: 300;
+  font-family: 'OpenSans_Condensed';
+  src: url('../fonts/OpenSans_Condensed-Bold.woff2') format('woff2'),
+    url('../fonts/OpenSans_Condensed-Bold.woff') format('woff');
+  font-weight: 400;
   font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Vetrino';
-  src: url('../fonts/vetrino.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
