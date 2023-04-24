@@ -1,0 +1,33 @@
+.partners {
+  padding: 73px;
+
+  &-slider {
+    margin: 0 65px;
+
+    .swiper-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__btns {
+
+      .swiper-button-prev:after,
+      .swiper-button-next:after {
+        content: "";
+      }
+    }
+  }
+}
+
+.slider-btn {
+  width: 14px;
+  height: 37px;
+  stroke: $primaryDark;
+  fill: none;
+}

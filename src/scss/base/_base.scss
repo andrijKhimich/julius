@@ -24,7 +24,7 @@ body {
   line-height: 1.333em;
   font-family: "Open Sans", sans-serif;
   color: $grey;
-  background-color: #F5F4F4;
+  background-color: $white;
   -webkit-font-smoothing: antialiased;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -71,11 +71,13 @@ h6 {
   margin: 0;
   font-weight: bold;
   font-family: 'OpenSans_Condensed', sans-serif;
+  text-transform: uppercase;
 }
 
 h1 {
   font-size: 60px;
   line-height: 1.167em;
+  margin-bottom: 16px;
 
   @include d(768) {
     font-size: 40px;
@@ -421,9 +423,9 @@ input {
 }
 
 .container {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0 15px;
+  max-width: 1375px;
+  // margin: 0 auto;
+  // padding: 0 15px;
 }
 
 .main,
@@ -459,4 +461,100 @@ main {
 
 .title-6 {
   @extend h6;
+}
+
+.icon-social {
+  fill: $primaryDark;
+  // max-width: 18px;
+  height: 25px;
+  width: 27px;
+  transition: fill $hover-duration $timing;
+}
+
+
+.btn {
+  text-align: center;
+  color: $primaryLight;
+  border: 1px solid $primaryLight;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 37px;
+  height: 40px;
+  padding: 0 69px;
+  transition: background-color $hover-duration $timing, color $hover-duration $timing;
+
+  &:hover {
+    background-color: $primaryLight;
+    color: $white;
+  }
+}
+
+.link {
+  font-size: 17px;
+  color: $primary;
+  line-height: 1.588em;
+  position: relative;
+  padding-right: 20px;
+  text-transform: uppercase;
+
+  .icon-arrow {
+    position: absolute;
+    right: 4px;
+    top: 5px;
+    transform: translateX(0);
+    transition: transform $hover-duration $timing;
+  }
+
+  &_sm {
+    text-transform: lowercase;
+  }
+
+  &:hover {
+    .icon-arrow {
+      transform: translateX(3px);
+    }
+  }
+}
+
+.section__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 46px;
+  align-items: flex-end;
+
+  .link {
+    margin-bottom: -10px;
+  }
+}
+
+.section__title {
+  position: relative;
+  color: $primaryLight;
+  text-transform: uppercase;
+  padding-left: 84px;
+
+  &::before {
+    content: "////";
+    position: absolute;
+    left: 0;
+    font-size: inherit;
+    font-family: inherit;
+  }
+}
+
+.icon-arrow {
+  fill: $primary;
+  height: 16px;
+  width: 12px;
+  transition: fill $hover-duration $timing;
+}
+
+.date {
+  display: inline-block;
+  font-size: 17px;
+  color: $primary;
+  line-height: 1.588em;
+  text-transform: uppercase;
+  margin-bottom: 9px;
 }
