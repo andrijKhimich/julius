@@ -449,6 +449,10 @@ input {
     padding: 0 23px;
   }
 
+  @include d(400) {
+    padding: 0 13px;
+  }
+
   // margin: 0 auto;
   // padding: 0 15px;
 }
@@ -608,4 +612,24 @@ main {
   margin-left: 5px;
   transform: scale(1);
   transition: transform $hover-duration $timing;
+}
+
+.inner-page {
+  .header {
+    background-color: $primary;
+    color: $white;
+    position: relative;
+
+    .icon-social {
+      fill: $white;
+    }
+
+    .burger {
+      border-color: $white;
+    }
+
+    .burger_item {
+      background-color: $white;
+    }
+  }
 }

@@ -1,6 +1,6 @@
 // header
 .header {
-  padding: 76px 0 20px;
+  padding: 76px 0 71px;
   position: absolute;
   top: 0;
   left: 0;
@@ -12,11 +12,11 @@
   color: $primaryDark;
 
   @include d(1800) {
-    padding: 64px 0 20px;
+    padding: 40px 0;
   }
 
   @include d(1440) {
-    padding: 40px 0 20px;
+    padding: 25px 0;
     font-size: 18px;
   }
 
@@ -109,6 +109,11 @@
   @include d(1440) {
     max-width: 240px;
     flex: 0 0 240px;
+  }
+
+  @include d(400) {
+    max-width: 200px;
+    flex: 0 0 200px;
   }
 }
 

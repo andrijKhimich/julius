@@ -6,6 +6,6 @@ $primaryDark: #002841;
 $primaryLight: #009EE3;
 
 // timing
-$hover-duration: .5s;
+$hover-duration: .3s;
 $duration: 1s;
-$timing: cubic-bezier(.17, .67, .55, 1.05);
+$timing: ease;
