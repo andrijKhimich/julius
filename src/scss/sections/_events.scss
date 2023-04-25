@@ -1,0 +1,101 @@
+.events {
+  color: $white;
+  background-color: $primary;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 40px;
+
+  &::before {
+    content: "";
+    width: 136px;
+    height: 100%;
+    background-image: linear-gradient(to bottom,
+        $white 1px,
+        transparent 1px);
+    background-repeat: repeat;
+    background-size: 100% 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: .2;
+
+    // mix-blend-mode: multiply;
+    @include d(1440) {
+      width: 5%;
+    }
+
+    @include d(1280) {
+      // width: 13px;
+      width: 2%;
+    }
+
+    @include d(1199) {
+      display: none;
+    }
+  }
+
+  &__title {
+    color: $white;
+    margin-bottom: 47px;
+
+    @include d(1440) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__content {
+    padding: 75px 0 65px;
+
+    @include d(767) {
+      padding: 40px 0;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    @include d(767) {
+      position: static;
+      margin: 0 -10px;
+    }
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+
+  &-table {
+    text-transform: uppercase;
+    font-size: 24px;
+
+    @include d(1440) {
+      font-size: 20px;
+    }
+
+    @include d(991) {
+      font-size: 18px;
+    }
+
+    table {
+      tr {
+        td {
+          &:first-child {
+            font-family: 'OpenSans_Condensed';
+            text-align: right;
+            font-weight: 700;
+            padding: 0 35px 0 5px;
+
+            @include d(991) {
+              padding: 0 10px 0 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

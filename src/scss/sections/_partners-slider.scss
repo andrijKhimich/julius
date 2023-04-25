@@ -1,9 +1,15 @@
 .partners {
   padding: 73px;
 
+  @include d(1440) {
+    padding: 50px 0;
+  }
+
   &-slider {
     margin: 0 65px;
-
+    @include d(1440) {
+      margin: 0 40px
+    }
     .swiper-wrapper {
       display: flex;
       align-items: center;

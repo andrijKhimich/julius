@@ -35,7 +35,7 @@ body {
   backface-visibility: hidden;
   text-rendering: geometricPrecision;
 
-  @include d(768) {
+  @include d(1440) {
     font-size: 17px;
   }
 }
@@ -79,7 +79,15 @@ h1 {
   line-height: 1.167em;
   margin-bottom: 16px;
 
-  @include d(768) {
+  @include d(1800) {
+    font-size: 50px;
+  }
+
+  @include d(1440) {
+    font-size: 44px;
+  }
+
+  @include d(991) {
     font-size: 40px;
   }
 }
@@ -88,7 +96,15 @@ h2 {
   font-size: 45px;
   line-height: 1.08em;
 
-  @include d(768) {
+  @include d(1440) {
+    font-size: 42px;
+  }
+
+  @include d(991) {
+    font-size: 38px;
+  }
+
+  @include d(767) {
     font-size: 35px;
   }
 }
@@ -424,6 +440,15 @@ input {
 
 .container {
   max-width: 1375px;
+
+  @include d(1800) {
+    max-width: 1220px;
+  }
+
+  @include d(991) {
+    padding: 0 23px;
+  }
+
   // margin: 0 auto;
   // padding: 0 15px;
 }
@@ -469,6 +494,11 @@ main {
   height: 25px;
   width: 27px;
   transition: fill $hover-duration $timing;
+
+  @include d(1024) {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 
@@ -523,8 +553,20 @@ main {
   margin-bottom: 46px;
   align-items: flex-end;
 
+  @include d(991) {
+    margin-bottom: 35px;
+  }
+
+  @include d(767) {
+    margin-bottom: 25px;
+  }
+
   .link {
     margin-bottom: -10px;
+
+    @include d(991) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -557,4 +599,13 @@ main {
   line-height: 1.588em;
   text-transform: uppercase;
   margin-bottom: 9px;
+}
+
+.icon-play {
+  width: 38px;
+  height: 38px;
+  fill: $white;
+  margin-left: 5px;
+  transform: scale(1);
+  transition: transform $hover-duration $timing;
 }

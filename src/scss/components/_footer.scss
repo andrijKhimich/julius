@@ -1,1 +1,115 @@
 // footer
+.footer {
+  background-color: $primaryDark;
+  color: $white;
+  padding: 58px 0 53px;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 14%;
+    height: 100%;
+    background-image: linear-gradient(to bottom,
+        $white 1px,
+        transparent 1px);
+    background-repeat: repeat;
+    background-size: 100% 2px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    opacity: .1;
+
+    @include d(1440) {
+      width: 10%;
+    }
+
+    // mix-blend-mode: multiply;
+  }
+
+  &__logo {
+    max-width: 226px;
+    margin-bottom: 5px;
+  }
+
+  &__box {
+    @include d(767) {
+      margin-bottom: 50px;
+    }
+
+    p {
+      font-size: 14px;
+      padding-left: 67px;
+    }
+  }
+
+  &__social-list {
+    .icon-social {
+      fill: $white;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    padding-left: 37px;
+    margin-bottom: 16px;
+  }
+
+  &__row {
+    display: flex;
+
+    @include d(767) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &-nav {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-right: 60px;
+
+    @include d(767) {
+      margin-right: 0;
+      margin-bottom: 50px;
+
+      &:first-child,
+      &:nth-child(2) {
+        flex: 0 0 50%;
+        max-width: 50%;
+
+      }
+    }
+
+    // @include d(991) {
+    //   margin-bottom: 50px;
+    // }
+
+    // @include d(767) {
+    //   column-count: 2;
+    // }
+
+    &__item {
+      white-space: nowrap;
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+
+    &__link {
+      transition: color $hover-duration $timing;
+
+      &:hover {
+        color: $primaryLight;
+      }
+    }
+  }
+
+  &__social {
+    padding-left: 34px;
+
+    @include d(991) {
+      padding-left: 0;
+    }
+  }
+}

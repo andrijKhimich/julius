@@ -11,8 +11,34 @@
   z-index: 20;
   color: $primaryDark;
 
+  @include d(1800) {
+    padding: 64px 0 20px;
+  }
+
+  @include d(1440) {
+    padding: 40px 0 20px;
+    font-size: 18px;
+  }
+
+  @include d(991) {
+    color: $white;
+    font-size: 22px;
+  }
+
   &__container {
     max-width: 1670px;
+
+    @include d(1800) {
+      max-width: 1490px;
+    }
+
+    @include d(1440) {
+      padding: 0 50px;
+    }
+
+    @include d(1280) {
+      padding: 0 13px;
+    }
   }
 
   &-row {
@@ -34,6 +60,9 @@
       background-color: $primary;
       pointer-events: none;
       opacity: 0;
+      padding-left: 23px;
+      flex-direction: column;
+      align-items: flex-start;
       transform: translateX(-20px);
       transition: opacity .5s ease-out, transform .5s ease-out;
 
@@ -46,11 +75,22 @@
       .nav-list {
         flex-direction: column;
         align-items: flex-start;
-        padding: 90px 0 0 22px;
+        padding: 90px 0 0 0;
         justify-content: flex-start;
-        font-size: 18px;
+        // font-size: 18px;
       }
     }
+  }
+
+  &__social {
+    .social-list__item {}
+
+    @include d(991) {
+      .icon-social {
+        fill: $white;
+      }
+    }
+
   }
 }
 
@@ -58,10 +98,31 @@
   display: inline-block;
   max-width: 343px;
   flex: 0 0 343px;
+  position: relative;
+  z-index: 1;
+
+  @include d(1800) {
+    max-width: 310px;
+    flex: 0 0 310px;
+  }
+
+  @include d(1440) {
+    max-width: 240px;
+    flex: 0 0 240px;
+  }
 }
 
 .nav {
   margin-right: 47px;
+
+  @include d(1024) {
+    margin-right: 10px;
+  }
+
+  @include d(991) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 
   &-list {
     display: flex;
@@ -72,6 +133,35 @@
     li {
       &:not(:last-child) {
         margin-right: 42px;
+
+        @include d(1800) {
+          margin-right: 17px;
+        }
+
+        @include d(1440) {
+          margin-right: 33px;
+        }
+
+        @include d(1366) {
+          margin-right: 24px;
+        }
+
+        @include d(1280) {
+          margin-right: 21px;
+        }
+
+        @include d(1199) {
+          margin-right: 10px;
+        }
+
+        @include d(1024) {
+          margin-right: 3px;
+        }
+
+        @include d(991) {
+          margin-right: 0;
+          margin-bottom: 5px;
+        }
       }
 
       &:nth-child(-n + 2) {
@@ -107,48 +197,72 @@
           opacity: 1;
         }
       }
+
+      @include d(1440) {
+        padding: 5px;
+      }
+
+      @include d(991) {
+        padding: 5px 5px 5px 0;
+      }
     }
   }
 }
 
 .burger {
   position: relative;
-  width: 22px;
-  height: 16px;
+  width: 38px;
+  height: 38px;
   z-index: 101;
   display: none;
+  padding: 8px;
+  border: 1px solid $primary;
 
   @include d(991) {
     display: inline-block;
   }
 
+  @include d(767) {
+    border-color: $white;
+  }
+
   &_item {
     position: absolute;
     width: 22px;
-    height: 2px;
-    background-color: $white;
-    left: 0;
-    transition: .5s ease-out;
+    height: 4px;
+    background-color: $primary;
+    left: 8px;
+    transition: .4s ease-out;
+    border-radius: 4px;
+
+    @include d(767) {
+      background-color: $white;
+    }
 
     &:first-child {
-      top: 0;
+      top: 8px;
     }
 
     &:nth-child(2) {
       top: 50%;
-      margin-top: -1px;
+      margin-top: -2px;
     }
 
     &:last-child {
-      bottom: 0;
+      bottom: 8px;
     }
   }
 
   &.active {
+    border-color: transparent;
+
     .burger_item {
+      background-color: $white;
+
       &:first-child {
+
         transform: rotate(45deg);
-        top: 7px;
+        top: 16px;
       }
 
       &:nth-child(2) {
@@ -157,7 +271,7 @@
 
       &:last-child {
         transform: rotate(-45deg);
-        bottom: 7px;
+        bottom: 16px;
       }
     }
   }
@@ -174,6 +288,10 @@
   }
 
   &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     &:hover {
       .icon-social {
         fill: $primaryLight;
