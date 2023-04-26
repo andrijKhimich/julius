@@ -1,18 +1,14 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="de">
+
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Project name" />
-  <!-- add preview for links -->
-  <meta property="og:image" content="./img/preview.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="627" />
+  <meta name="description" content="Julius Tannert">
   <!-- favicons -->
   <link rel="icon" href="img/favicon/favicon.ico" sizes="any"><!-- 32×32 -->
-  <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png"><!-- 180×180 -->
   <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
   <!-- main styles -->
   <link rel="stylesheet" href="./css/style.min.css">
@@ -40,7 +36,7 @@
                   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
                     massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
                     quam felis…</p>
-                  <a href="./news.html" class="btn">
+                  <a href="./news.html" class="btn" aria-label="News link">
                     News
                   </a>
                 </div>
@@ -119,7 +115,7 @@
             <div class="col-12">
               <div class="section__header">
                 <h2 class="title-2 section__title">News</h2>
-                <a href="./news.html" class="link">alle News
+                <a href="./news.html" class="link" aria-label="News link">alle News
                   <svg class="icon-arrow">
                     <use xlink:href="img/sprite-svg/sprite.svg#arrow"></use>
                   </svg>
@@ -140,7 +136,7 @@
                   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
                     massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
                     quam felis…</p>
-                  <a href="./article.html" class="link link_sm">weiter lesen
+                  <a href="./article.html" class="link link_sm"  aria-label="News link">weiter lesen
                     <svg class="icon-arrow">
                       <use xlink:href="img/sprite-svg/sprite.svg#arrow"></use>
                     </svg>
@@ -159,7 +155,7 @@
                   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
                     massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
                     quam felis…</p>
-                  <a href="./article.html" class="link link_sm">weiter lesen
+                  <a href="./article.html" class="link link_sm"  aria-label="News link">weiter lesen
                     <svg class="icon-arrow">
                       <use xlink:href="img/sprite-svg/sprite.svg#arrow"></use>
                     </svg>
@@ -178,7 +174,7 @@
                   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
                     massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
                     quam felis…</p>
-                  <a href="./article.html" class="link link_sm">weiter lesen
+                  <a href="./article.html" class="link link_sm"  aria-label="News link">weiter lesen
                     <svg class="icon-arrow">
                       <use xlink:href="img/sprite-svg/sprite.svg#arrow"></use>
                     </svg>
@@ -238,7 +234,7 @@
             <div class="col-12">
               <div class="section__header videos__header">
                 <h2 class="title-2 section__title">Youtube</h2>
-                <a href="https://www.youtube.com/@juliustannert/videos" target="_blank" class="link">alle videos
+                <a href="https://www.youtube.com/@juliustannert/videos" target="_blank" class="link"  aria-label="video link">alle videos
                   <svg class="icon-arrow">
                     <use xlink:href="img/sprite-svg/sprite.svg#arrow"></use>
                   </svg>
@@ -247,8 +243,8 @@
             </div>
             <div class="col-md-4">
               <div class="videos__item">
-                <iframe class="latestVideoEmbed" videoId='0' frameborder="0" allowfullscreen></iframe>
-                <a href="#" class="play">
+                <iframe class="latestVideoEmbed" title="video" name="video" data-video='0' allowfullscreen></iframe>
+                <a href="#" class="play" aria-label="video link">
                   <svg class="icon-play">
                     <use xlink:href="img/sprite-svg/sprite.svg#play"></use>
                   </svg>
@@ -257,8 +253,8 @@
             </div>
             <div class="col-md-4">
               <div class="videos__item">
-                <iframe class="latestVideoEmbed" videoId='1' frameborder="0" allowfullscreen></iframe>
-                <a href="#" class="play">
+                <iframe class="latestVideoEmbed" title="video" name="video" data-video='1' allowfullscreen></iframe>
+                <a href="#" class="play" aria-label="video link">
                   <svg class="icon-play">
                     <use xlink:href="img/sprite-svg/sprite.svg#play"></use>
                   </svg>
@@ -267,8 +263,8 @@
             </div>
             <div class="col-md-4">
               <div class="videos__item">
-                <iframe class="latestVideoEmbed" videoId='2' frameborder="0" allowfullscreen></iframe>
-                <a href="#" class="play">
+                <iframe class="latestVideoEmbed" title="video" name="video" data-video='2' allowfullscreen></iframe>
+                <a href="#" class="play" aria-label="video link">
                   <svg class="icon-play">
                     <use xlink:href="img/sprite-svg/sprite.svg#play"></use>
                   </svg>
