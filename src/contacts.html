@@ -37,12 +37,14 @@
                     <div class="col-md-6">
                       <div class="contact-form__box">
                         <label>
-                          <input class="contact-form__input" type="text" placeholder="Vorname, Name">
+                          <input class="contact-form__input" required name="name" type="text"
+                            placeholder="Vorname, Name">
                         </label>
                       </div>
                       <div class="contact-form__box">
                         <label>
-                          <input class="contact-form__input" type="email" placeholder="Ihre Mail-Adresse">
+                          <input class="contact-form__input" required name="email" type="email"
+                            placeholder="Ihre Mail-Adresse">
                         </label>
                       </div>
                       <div class="contact-form__box">
@@ -57,12 +59,11 @@
                           <textarea name="text" placeholder="Ihre Nachricht"></textarea>
                         </label>
                       </div>
-
                     </div>
                     <div class="col-md-6">
                       <div class="contact-form__row">
                         <label for="checkbox">
-                          <input type="checkbox" id="checkbox" class="visually-hidden">
+                          <input type="checkbox" name="check" id="checkbox" class="visually-hidden">
                           <span class="custom-checkbox"></span>
                           Ich bin damit einverstanden, dass meine Daten zur Bearbeitung meines
                           Anliegens verwendet werden. (Weitere Informationen und Widerrufshinweise finden Sie in der
@@ -74,15 +75,14 @@
                     </div>
                   </div>
                 </form>
-
               </div>
             </div>
           </div>
         </div>
       </section>
       <section class="contact-images">
-        <img src="./img/contacts/contact-1.jpg" alt="car">
-        <img src="./img/contacts/contact-2.jpg" alt="car">
+        <img src="./img/contacts/contact-1.webp" alt="car">
+        <img src="./img/contacts/contact-2.webp" alt="car">
       </section>
     </main>
     @@include("./html/_footer.html")
@@ -93,7 +93,3 @@
 </body>
 
 </html>
-
-<!-- <svg class="icon-social">
-  <use xlink:href="img/sprite-svg/sprite.svg#favicon"></use>
-</svg> -->
