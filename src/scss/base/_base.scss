@@ -1,9 +1,9 @@
 // main project styles + custom normalize
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+// *,
+// *::before,
+// *::after {
+//   box-sizing: border-box;
+// }
 
 
 html {
@@ -409,23 +409,23 @@ input[type='number'] {
 textarea,
 input {
   &::-webkit-input-placeholder {
-    font-size: 16px;
-    color: $grey;
+    font-size: 18px;
+    color: $white;
   }
 
   &::-moz-placeholder {
-    font-size: 16px;
-    color: $grey;
+    font-size: 18px;
+    color: $white;
   }
 
   &:-ms-input-placeholder {
-    font-size: 16px;
-    color: $grey;
+    font-size: 18px;
+    color: $white;
   }
 
   &::placeholder {
-    font-size: 16px;
-    color: $grey;
+    font-size: 18px;
+    color: $white;
   }
 }
 
@@ -433,7 +433,7 @@ input {
   outline: none;
 }
 
-.main-wrapper {
+.wrapper {
   position: relative;
   overflow: hidden;
 }
@@ -455,6 +455,25 @@ input {
 
   // margin: 0 auto;
   // padding: 0 15px;
+}
+
+
+.container_lg {
+  max-width: 1670px;
+  margin: 0 auto;
+  padding: 0 13px;
+
+  @include d(1800) {
+    max-width: 1490px;
+  }
+
+  @include d(1440) {
+    padding: 0 50px;
+  }
+
+  @include d(1280) {
+    padding: 0 13px;
+  }
 }
 
 .main,
@@ -631,5 +650,25 @@ main {
     .burger_item {
       background-color: $white;
     }
+
+    .nav-list__link {
+      &::before {
+        border-color: $white;
+      }
+    }
   }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

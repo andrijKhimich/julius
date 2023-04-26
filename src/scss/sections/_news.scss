@@ -81,28 +81,4 @@
       row-gap: 60px;
     }
   }
-
-  &-page {
-    padding-top: 140px;
-
-    @include d(1800) {
-      padding-top: 100px;
-    }
-
-    @include d(991) {
-      padding-top: 60px;
-    }
-
-    &__header {
-      margin-bottom: 124px;
-
-      @include d(1800) {
-        margin-bottom: 80px;
-      }
-
-      @include d(991) {
-        margin-bottom: 40px;
-      }
-    }
-  }
 }
