@@ -1,134 +1,145 @@
 .gallery {
-  &__row {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(21, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    grid-column-gap: 26px;
-    grid-row-gap: 26px;
+	&__row {
+		// display: grid;
+		// // grid-template-columns: repeat(9, 1fr);
+		// // grid-template-rows: repeat(21, 1fr);
+		// // grid-column-gap: 0px;
+		// // grid-row-gap: 0px;
+		// // grid-column-gap: 26px;
+		// // grid-row-gap: 26px;
+		// gap: 26px;
+		// grid-template-columns: repeat(4, 1fr);
+		// grid-template-rows: masonry;
+		// @include d(991) {
+		// 	gap: 15px;
+		// }
+		// display: flex;
+		// padding: 0.5rem 0.5rem 0 0.5rem;
+		// column-count: 4;
+		// column-gap: 26px;
+		// @include d(767) {
+		//   grid-template-columns: repeat(2, 1fr);
+		//   grid-template-rows: repeat(19, 50px);
+		// }
+		margin: 0 -8px;
+	}
+	&__col {
+		width: 25%;
+		margin-bottom: 16px;
+		padding: 0 8px;
+		// flex-grow: 1;
+		// margin-bottom: 26px;
+		// display: inline-block;
+		// margin: 0;
+		// display: inline-block;
+		// margin-bottom: 0px;
+		// width: 100%;
+	}
+	// &__col {
 
-    @include d(991) {
-      grid-column-gap: 15px;
-      grid-row-gap: 15px;
+	//   &._1 {
+	//     grid-area: 1 / 1 / 5 / 5;
 
-    }
+	//     @include d(767) {
+	//       grid-area: 1 / 1 / 5 / 3;
+	//     }
+	//   }
 
-    @include d(767) {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(19, 50px);
-    }
-  }
+	//   &._2 {
+	//     grid-area: 1 / 5 / 7 / 7;
 
-  &__col {
+	//     @include d(767) {
+	//       grid-area: 5 / 1 / 10 / 2;
+	//     }
+	//   }
 
-    &._1 {
-      grid-area: 1 / 1 / 5 / 5;
+	//   &._3 {
+	//     grid-area: 1 / 7 / 5 / 10;
 
-      @include d(767) {
-        grid-area: 1 / 1 / 5 / 3;
-      }
-    }
+	//     @include d(767) {
+	//       grid-area: 5 / 2 / 7 / 3;
+	//     }
+	//   }
 
-    &._2 {
-      grid-area: 1 / 5 / 7 / 7;
+	//   &._4 {
+	//     grid-area: 5 / 1 / 12 / 3;
 
-      @include d(767) {
-        grid-area: 5 / 1 / 10 / 2;
-      }
-    }
+	//     @include d(767) {
+	//       grid-area: 7 / 2 / 10 / 3;
+	//     }
+	//   }
 
-    &._3 {
-      grid-area: 1 / 7 / 5 / 10;
+	//   &._5 {
+	//     grid-area: 5 / 3 / 12 / 5;
 
-      @include d(767) {
-        grid-area: 5 / 2 / 7 / 3;
-      }
-    }
+	//     @include d(767) {
+	//       grid-area: 10 / 1 / 15 / 3;
+	//     }
+	//   }
 
-    &._4 {
-      grid-area: 5 / 1 / 12 / 3;
+	//   &._6 {
+	//     grid-area: 7 / 5 / 12 / 7;
 
-      @include d(767) {
-        grid-area: 7 / 2 / 10 / 3;
-      }
-    }
+	//     @include d(767) {
+	//       grid-area: 15 / 1 / 20 / 2;
+	//     }
+	//   }
 
-    &._5 {
-      grid-area: 5 / 3 / 12 / 5;
+	//   &._7 {
+	//     grid-area: 5 / 7 / 12 / 10;
 
-      @include d(767) {
-        grid-area: 10 / 1 / 15 / 3;
-      }
-    }
+	//     @include d(767) {
+	//       grid-area: 15 / 2 / 20 / 3;
+	//     }
+	//   }
 
-    &._6 {
-      grid-area: 7 / 5 / 12 / 7;
+	//   &._8 {
+	//     grid-area: 12 / 1 / 18 / 5;
 
-      @include d(767) {
-        grid-area: 15 / 1 / 20 / 2;
-      }
-    }
+	//     @include d(767) {
+	//       display: none;
+	//     }
+	//   }
 
-    &._7 {
-      grid-area: 5 / 7 / 12 / 10;
+	//   &._9 {
+	//     grid-area: 12 / 5 / 17 / 10;
 
-      @include d(767) {
-        grid-area: 15 / 2 / 20 / 3;
-      }
-    }
+	//     @include d(767) {
+	//       display: none;
+	//     }
+	//   }
 
-    &._8 {
-      grid-area: 12 / 1 / 18 / 5;
+	//   &._10 {
+	//     grid-area: 18 / 1 / 22 / 3;
 
-      @include d(767) {
-        display: none;
-      }
-    }
+	//     @include d(767) {
+	//       display: none;
+	//     }
+	//   }
 
-    &._9 {
-      grid-area: 12 / 5 / 17 / 10;
+	//   &._11 {
+	//     grid-area: 18 / 3 / 22 / 5;
 
-      @include d(767) {
-        display: none;
-      }
-    }
+	//     @include d(767) {
+	//       display: none;
+	//     }
+	//   }
 
-    &._10 {
-      grid-area: 18 / 1 / 22 / 3;
+	//   &._12 {
+	//     grid-area: 17 / 5 / 22 / 10;
 
-      @include d(767) {
-        display: none;
-      }
-    }
+	//     @include d(767) {
+	//       display: none;
+	//     }
+	//   }
+	// }
 
-    &._11 {
-      grid-area: 18 / 3 / 22 / 5;
+	// &__item {
+	// 	height: 100%;
 
-      @include d(767) {
-        display: none;
-      }
-    }
-
-    &._12 {
-      grid-area: 17 / 5 / 22 / 10;
-
-      @include d(767) {
-        display: none;
-      }
-    }
-  }
-
-  &__item {
-    height: 100%;
-
-    img {
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-}
-
-.div1 {
-  grid-area: 1 / 1 / 5 / 5;
+	// 	img {
+	// 		height: 100%;
+	// 		object-fit: cover;
+	// 	}
+	// }
 }

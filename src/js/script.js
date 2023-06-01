@@ -1,67 +1,65 @@
 const toggleMenu = () => {
-  const burger = document.querySelector(".js-burger");
-  const menu = document.querySelector(".js-header-nav");
-  const body = document.querySelector("body");
-  burger.addEventListener("click", () => {
-    if (!menu.classList.contains("active")) {
-      menu.classList.add("active");
-      burger.classList.add("active");
-      body.classList.add("locked");
-    } else {
-      menu.classList.remove("active");
-      burger.classList.remove("active");
-      body.classList.remove("locked");
-    }
-  });
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 992) {
-      menu.classList.remove("active");
-      burger.classList.remove("active");
-      body.classList.remove("locked");
-    }
-  })
-}
+	const burger = document.querySelector(".js-burger");
+	const menu = document.querySelector(".js-header-nav");
+	const body = document.querySelector("body");
+	burger.addEventListener("click", () => {
+		if (!menu.classList.contains("active")) {
+			menu.classList.add("active");
+			burger.classList.add("active");
+			body.classList.add("locked");
+		} else {
+			menu.classList.remove("active");
+			burger.classList.remove("active");
+			body.classList.remove("locked");
+		}
+	});
+	window.addEventListener("resize", () => {
+		if (window.innerWidth > 992) {
+			menu.classList.remove("active");
+			burger.classList.remove("active");
+			body.classList.remove("locked");
+		}
+	});
+};
 toggleMenu();
 
-
 const slider = new Swiper(".partners-slider", {
-  grabCursor: true,
-  loop: true,
-  // spaceBetween: 60,
-  // slidesPerView: 7,
-  freeMode: false,
-  allowTouchMove: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  // noSwiping: true,
-  speed: 500,
-  // freeModeMomentum: false,
-  // autoplay: {
-  // delay: 0,
-  // disableOnInteraction: true,
-  // },
-  breakpoints: {
-    992: {
-      slidesPerView: 7,
-      spaceBetween: 60
-    },
-    767: {
-      slidesPerView: 6,
-      spaceBetween: 30
-    },
-    575: {
-      slidesPerView: 5,
-      spaceBetween: 30
-    },
-    320: {
-      slidesPerView: 3,
-      spaceBetween: 30
-    },
-  }
+	grabCursor: true,
+	loop: true,
+	// spaceBetween: 60,
+	// slidesPerView: 7,
+	freeMode: false,
+	allowTouchMove: true,
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+	// noSwiping: true,
+	speed: 500,
+	// freeModeMomentum: false,
+	// autoplay: {
+	// delay: 0,
+	// disableOnInteraction: true,
+	// },
+	breakpoints: {
+		992: {
+			slidesPerView: 7,
+			spaceBetween: 60,
+		},
+		767: {
+			slidesPerView: 6,
+			spaceBetween: 30,
+		},
+		575: {
+			slidesPerView: 5,
+			spaceBetween: 30,
+		},
+		320: {
+			slidesPerView: 3,
+			spaceBetween: 30,
+		},
+	},
 });
-
 
 // load latest video from youtube
 
@@ -139,3 +137,18 @@ const slider = new Swiper(".partners-slider", {
 // }
 
 // findVideos();
+
+var elem = document.querySelector(".gallery__row");
+var msnry = new Masonry(elem, {
+	// options
+	itemSelector: ".gallery__col",
+	columnWidth: 200,
+	columnWidth: ".gallery__col",
+	// gutter: 26,
+});
+
+// element argument can be a selector string
+//   for an individual element
+// var msnry = new Masonry( '.grid', {
+//   // options
+// });

@@ -1,130 +1,175 @@
 <!DOCTYPE html>
 <html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Julius Tannert" />
+		<!-- favicons -->
+		<link rel="icon" href="img/favicon/favicon.ico" sizes="any" />
+		<!-- 32×32 -->
+		<link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml" />
+		<!-- main styles -->
+		<link rel="stylesheet" href="./css/style.min.css" />
+		<title>Julius Tannert</title>
+	</head>
 
+	<body>
+		<div class="wrapper inner-page">
+			@@include("./html/_header.html")
+			<main class="main">
+				<section class="news news-page article-page">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<div class="section__header article-page__header">
+									<h2 class="title-2 section__title">News</h2>
+									<a href="./news.html" class="link" aria-label="news link"
+										>alle News
+										<svg class="icon-arrow">
+											<use xlink:href="img/sprite-svg/sprite.svg#arrow"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-8">
+								<article class="article">
+									<span class="date">11.11.2022</span>
+									<h2>
+										WEITER AUF ANGRIFF AUF DIE SPITZE IN ZWEITER SAISONHÄLFTE
+									</h2>
+									<img src="./img/news/news-1.webp" alt="news" loading="lazy" />
+									<p>
+										Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+										diam nonumy eirmod tempor invidunt ut labore et dolore magna
+										aliquyam erat, sed diam voluptua. At vero eos et accusam et
+										justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+										sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+										ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+										nonumy eirmod tempor invidunt ut labore et dolore magna
+										aliquyam erat, sed diam voluptua. At vero eos et accusam et
+										justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+										sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+										ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+										nonumy eirmod tempor invidunt ut labore et dolore magna
+										aliquyam erat, sed diam voluptua. At vero eos et accusam et
+										justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+										sea takimata sanctus est Lorem ipsum dolor sit amet.
+									</p>
+									<p>
+										Duis autem vel eum iriure dolor in hendrerit in vulputate
+										velit esse molestie consequat, vel illum dolore eu feugiat
+										nulla facilisis at vero eros et accumsan et iusto odio
+										dignissim qui blandit praesent luptatum zzril delenit augue
+										duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit
+										amet, consectetuer adipiscing elit, sed diam nonummy nibh
+										euismod tincidunt ut laoreet dolore magna aliquam erat
+										volutpat.
+									</p>
+									<p>
+										Ut wisi enim ad minim veniam, quis nostrud exerci tation
+										ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+										consequat. Duis autem vel eum iriure dolor in hendrerit in
+										vulputate velit esse molestie consequat, vel illum dolore eu
+										feugiat nulla facilisis at vero eros et accumsan et iusto
+										odio dignissim qui blandit praesent luptatum zzril delenit
+										augue duis dolore te feugait nulla facilisi.
+									</p>
+									<p>
+										Nam liber tempor cum soluta nobis eleifend option congue
+										nihil imperdiet doming id quod mazim placerat facer possim
+										assum. Lorem ipsum dolor sit amet, consectetuer adipiscing
+										elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+										dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+										veniam, quis nostrud exerci tation ullamcorper suscipit
+										lobortis nisl ut aliquip ex ea commodo consequat.
+									</p>
+									<p>
+										Duis autem vel eum iriure dolor in hendrerit in vulputate
+										velit esse molestie consequat, vel illum dolore eu feugiat
+										nulla facilisis.
+									</p>
+								</article>
+							</div>
+							<div class="col-md-6 col-lg-4">
+								<div class="row news__row">
+									<div class="col-12">
+										<div class="news-card">
+											<div class="news-card__image">
+												<img
+													src="./img/home/news-2.webp"
+													alt="news"
+													loading="lazy" />
+											</div>
+											<div class="news-card__content">
+												<span class="date">03.10.2022</span>
+												<h3 class="title-3">
+													Tannert bereit für Finale in der Deutschen
+													Rallyemeisterschaft
+												</h3>
+												<p>
+													Lorem ipsum dolor sit amet, consectetuer adipiscing
+													elit. Aenean commodo ligula eget dolor. Aenean massa.
+													Cum sociis natoque penatibus et magnis dis parturient
+													montes, nascetur ridiculus mus. Donec quam felis…
+												</p>
+												<a
+													href="./article.html"
+													class="link link_sm"
+													aria-label="news link"
+													>weiter lesen
+													<svg class="icon-arrow">
+														<use
+															xlink:href="img/sprite-svg/sprite.svg#arrow"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="news-card">
+											<div class="news-card__image">
+												<img
+													src="./img/home/news-3.webp"
+													alt="news"
+													loading="lazy" />
+											</div>
+											<div class="news-card__content">
+												<span class="date">04.09.2022</span>
+												<h3 class="title-3">
+													Angriff auf DRM-Spitze in zweiter Saisonhälfte
+												</h3>
+												<p>
+													Lorem ipsum dolor sit amet, consectetuer adipiscing
+													elit. Aenean commodo ligula eget dolor. Aenean massa.
+													Cum sociis natoque penatibus et magnis dis parturient
+													montes, nascetur ridiculus mus. Donec quam felis…
+												</p>
+												<a
+													href="./article.html"
+													class="link link_sm"
+													aria-label="news link"
+													>weiter lesen
+													<svg class="icon-arrow">
+														<use
+															xlink:href="img/sprite-svg/sprite.svg#arrow"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include("./html/_footer.html")
+		</div>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Julius Tannert">
-  <!-- favicons -->
-  <link rel="icon" href="img/favicon/favicon.ico" sizes="any"><!-- 32×32 -->
-  <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
-  <!-- main styles -->
-  <link rel="stylesheet" href="./css/style.min.css">
-  <title>Julius Tannert</title>
-</head>
-
-<body>
-  <div class="wrapper inner-page">
-    @@include("./html/_header.html")
-    <main class="main">
-      <section class="news news-page article-page">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="section__header article-page__header">
-                <h2 class="title-2 section__title">News</h2>
-                <a href="./news.html" class="link" aria-label="news link">alle News
-                  <svg class="icon-arrow">
-                    <use xlink:href="img/sprite-svg/sprite.svg#arrow"></use>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-8">
-              <article class="article">
-                <span class="date">11.11.2022</span>
-                <h2>WEITER AUF ANGRIFF AUF DIE SPITZE IN
-                  ZWEITER SAISONHÄLFTE</h2>
-                <img src="./img/news/news-1.webp" alt="news" loading="lazy">
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-                  et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                  ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-                  dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                  rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                  dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-                  dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                  rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                </p>
-                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
-                  dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
-                  praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit
-                  amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                  aliquam erat volutpat. </p>
-                <p> Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-                  aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
-                  molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
-                  dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-                <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim
-                  placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-                  veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-                  consequat. </p>
-                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
-                dolore eu feugiat nulla facilisis. </p>
-              </article>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="row news__row">
-                <div class="col-12">
-                  <div class="news-card">
-                    <div class="news-card__image">
-                      <img src="./img/home/news-2.webp" alt="news" loading="lazy">
-                    </div>
-                    <div class="news-card__content">
-                      <span class="date">03.10.2022</span>
-                      <h3 class="title-3">Tannert bereit für Finale in der Deutschen Rallyemeisterschaft</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                        Aenean
-                        massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        Donec
-                        quam felis…</p>
-                      <a href="./article.html" class="link link_sm" aria-label="news link">weiter lesen
-                        <svg class="icon-arrow">
-                          <use xlink:href="img/sprite-svg/sprite.svg#arrow"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="news-card">
-                    <div class="news-card__image">
-                      <img src="./img/home/news-3.webp" alt="news" loading="lazy">
-                    </div>
-                    <div class="news-card__content">
-                      <span class="date">04.09.2022</span>
-                      <h3 class="title-3">Angriff auf DRM-Spitze in zweiter Saisonhälfte</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                        Aenean
-                        massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        Donec
-                        quam felis…</p>
-                      <a href="./article.html" class="link link_sm" aria-label="news link">weiter lesen
-                        <svg class="icon-arrow">
-                          <use xlink:href="img/sprite-svg/sprite.svg#arrow"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    @@include("./html/_footer.html")
-  </div>
-
-  <script src="./js/libs.min.js"></script>
-  <script src="./js/script.min.js"></script>
-</body>
-
+		<script src="./js/libs.min.js"></script>
+		<script src="./js/script.min.js"></script>
+	</body>
 </html>
