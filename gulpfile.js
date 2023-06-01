@@ -103,7 +103,8 @@ const js = () => {
     "node_modules/svg4everybody/dist/svg4everybody.min.js", // no jQuery needed
 
     // modal
-    // "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
+    "node_modules/fslightbox/index.js",
+    // "node_modules/lightbox2/dist/js/lightbox.min.js",
 
     // animation
     // "src/libs/gsap-and-scrollTrigger.js",

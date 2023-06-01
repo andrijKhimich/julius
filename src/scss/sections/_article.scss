@@ -1,4 +1,23 @@
 .article {
+  &_inner {
+    h2 {
+      margin: 12px 0 36px;
+    }
+
+    img {
+      margin: 35px 0 30px 0;
+    }
+
+    p {
+      margin-bottom: 31px;
+      line-height: 1.667em;
+    }
+
+    a {
+      color: $primary;
+    }
+  }
+
   h2 {
     margin: 12px 0 36px;
     font-size: 55px;
@@ -29,7 +48,6 @@
   p {
     margin-bottom: 31px;
     line-height: 1.667em;
-
   }
 
   a {
@@ -53,12 +71,12 @@
       }
     }
 
-    .news__row {
-      row-gap: 40px;
+    // .news__row {
+    //   row-gap: 40px;
 
-      @include d(991) {
-        display: none;
-      }
-    }
+    //   @include d(991) {
+    //     display: none;
+    //   }
+    // }
   }
 }

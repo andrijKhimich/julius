@@ -8,6 +8,7 @@
 
 html {
   font-size: 100%;
+  scroll-behavior: smooth;
   height: 100%;
   -webkit-text-size-adjust: none;
   -webkit-appearance: none;
@@ -423,6 +424,10 @@ input {
     max-width: 1220px;
   }
 
+  @include d(1280) {
+    max-width: 100%;
+  }
+
   @include d(991) {
     padding: 0 23px;
   }
@@ -430,9 +435,6 @@ input {
   @include d(400) {
     padding: 0 13px;
   }
-
-  // margin: 0 auto;
-  // padding: 0 15px;
 }
 
 
@@ -440,6 +442,8 @@ input {
   max-width: 1670px;
   margin: 0 auto;
   padding: 0 13px;
+  max-width: 87%;
+  width: 100%;
 
   @include d(1800) {
     max-width: 1490px;
@@ -447,6 +451,7 @@ input {
 
   @include d(1440) {
     padding: 0 50px;
+    max-width: 100%;
   }
 
   @include d(1280) {
@@ -644,9 +649,20 @@ main {
   margin: -1px;
   border: 0;
   padding: 0;
-  
+
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.pagination {
+  color: $primary;
+
+  li {
+    span.active {
+      font-family: 'OpenSans_Condensed';
+      font-weight: 700;
+    }
+  }
 }

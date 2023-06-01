@@ -15,6 +15,7 @@
     "clean": "^4.0.2",
     "css": "^3.0.0",
     "del": "^6.1.1",
+    "fslightbox": "^3.4.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
@@ -30,6 +31,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-uglify-es": "^3.0.0",
+    "lightbox2": "^2.11.4",
     "node-sass": "^7.0.1",
     "prettier": "^2.7.1",
     "sass": "^1.53.0"

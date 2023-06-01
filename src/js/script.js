@@ -1,154 +1,172 @@
 const toggleMenu = () => {
-	const burger = document.querySelector(".js-burger");
-	const menu = document.querySelector(".js-header-nav");
-	const body = document.querySelector("body");
-	burger.addEventListener("click", () => {
-		if (!menu.classList.contains("active")) {
-			menu.classList.add("active");
-			burger.classList.add("active");
-			body.classList.add("locked");
-		} else {
-			menu.classList.remove("active");
-			burger.classList.remove("active");
-			body.classList.remove("locked");
-		}
-	});
-	window.addEventListener("resize", () => {
-		if (window.innerWidth > 992) {
-			menu.classList.remove("active");
-			burger.classList.remove("active");
-			body.classList.remove("locked");
-		}
-	});
-};
+  const burger = document.querySelector(".js-burger");
+  const menu = document.querySelector(".js-header-nav");
+  const body = document.querySelector("body");
+  burger.addEventListener("click", () => {
+    if (!menu.classList.contains("active")) {
+      menu.classList.add("active");
+      burger.classList.add("active");
+      body.classList.add("locked");
+    } else {
+      menu.classList.remove("active");
+      burger.classList.remove("active");
+      body.classList.remove("locked");
+    }
+  });
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 992) {
+      menu.classList.remove("active");
+      burger.classList.remove("active");
+      body.classList.remove("locked");
+    }
+  })
+}
 toggleMenu();
 
+
+const addInnerPageClass = () => {
+  const innerClass = document.querySelector(".js-innerPage");
+  const wrapper = document.querySelector(".wrapper");
+
+  if (innerClass) {
+    wrapper.classList.add("inner-page");
+  }
+}
+
+addInnerPageClass();
+
+
+// const slider = new Swiper(".swiper", {
+//   grabCursor: false,
+//   loop: true,
+//   spaceBetween: 12,
+//   slidesPerView: 3,
+//   freeMode: true,
+//   allowTouchMove: false,
+//   noSwiping: true,
+//   speed: 20000,
+//   freeModeMomentum: false,
+//   autoplay: {
+//     delay: 0,
+//     disableOnInteraction: true,
+//   },
+//   breakpoints: {
+//     992: {
+//       slidesPerView: 4.33,
+//       spaceBetween: 30
+//     },
+//   }
+// });
+
 const slider = new Swiper(".partners-slider", {
-	grabCursor: true,
-	loop: true,
-	// spaceBetween: 60,
-	// slidesPerView: 7,
-	freeMode: false,
-	allowTouchMove: true,
-	navigation: {
-		nextEl: ".swiper-button-next",
-		prevEl: ".swiper-button-prev",
-	},
-	// noSwiping: true,
-	speed: 500,
-	// freeModeMomentum: false,
-	// autoplay: {
-	// delay: 0,
-	// disableOnInteraction: true,
-	// },
-	breakpoints: {
-		992: {
-			slidesPerView: 7,
-			spaceBetween: 60,
-		},
-		767: {
-			slidesPerView: 6,
-			spaceBetween: 30,
-		},
-		575: {
-			slidesPerView: 5,
-			spaceBetween: 30,
-		},
-		320: {
-			slidesPerView: 3,
-			spaceBetween: 30,
-		},
-	},
+  grabCursor: false,
+  loop: true,
+  // spaceBetween: 0,
+  // slidesPerView: 7,
+  // freeMode: true,
+  // allowTouchMove: false,
+  // noSwiping: true,
+  speed: 1000,
+  // freeModeMomentum: false,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  // noSwiping: true,
+  // speed: 500,
+  // freeModeMomentum: false,
+  // autoplay: {
+  // delay: 0,
+  // disableOnInteraction: true,
+  // },
+  breakpoints: {
+    992: {
+      slidesPerView: 7,
+      spaceBetween: 60
+    },
+    767: {
+      slidesPerView: 6,
+      spaceBetween: 30
+    },
+    575: {
+      slidesPerView: 5,
+      spaceBetween: 30
+    },
+    320: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+  }
 });
 
-// load latest video from youtube
+if (document.querySelector('.videos')) {
+  fsLightboxInstances["first-lightbox"].props.onOpen = function () {
+    // console.log("The first lightbox has opened.");
+  }
+  fsLightboxInstances["second-lightbox"].props.onOpen = function () {
+    // console.log("The second lightbox has opened.");
+  }
+}
 
-// const loadVideo = (iframe) => {
-//   const cid = "UCgJJY_sxYWgwwZYdhI-LCqg";
-//   const channelURL = encodeURIComponent(`https://www.youtube.com/feeds/videos.xml?channel_id=${cid}`)
-//   const reqURL = `https://api.rss2json.com/v1/api.json?rss_url=${channelURL}`;
+const menuLinks = document.querySelectorAll(".nav-list__link");
 
-//   fetch(reqURL)
-//     .then(response => response.json())
-//     .then(result => {
-//       console.log(result)
-//       const videoNumber = iframe.getAttribute('data-video')
-//       const link = result.items[videoNumber].link;
-//       const id = link.substr(link.indexOf("=") + 1);
-//       iframe.setAttribute("src", `https://youtube.com/embed/${id}?controls=1&showinfo=0&autohide=1&autoplay=0`);
-//     })
-//     .catch(error => console.log('error', error));
-// }
+menuLinks.forEach((menuLink) => {
+  menuLink.addEventListener("click", function (e) {
+    if (e.target.href.indexOf('/instructor') != -1) {
+      e.preventDefault();
+      window.open('/julius#instructorSection', '_self');
+    }
+  })
+});
 
-// const iframes = document.getElementsByClassName('latestVideoEmbed');
-// for (let i = 0, len = iframes.length; i < len; i++) {
-//   loadVideo(iframes[i]);
-// }
 
-// function findVideos() {
-//   let videos = document.querySelectorAll('.video');
+// $(document).ready(function () {
 
-//   for (let i = 0; i < videos.length; i++) {
-//       setupVideo(videos[i]);
-//   }
-// }
+//   var isLoading = false;
+//   $('.spinning-wheel').hide();
 
-// function setupVideo(video) {
-//   let link = video.querySelector('.video__link');
-//   let media = video.querySelector('.video__media');
-//   let button = video.querySelector('.video__button');
-//   let id = parseMediaURL(media);
+//   $(window).scroll(function () {
+//     if ($(window).scrollTop() + $(window).height() >= $(document).height() - 300) {
+//       var $next = $('a[rel=next]');
+//       var url = $next.attr('href');
 
-//   video.addEventListener('click', () => {
-//       let iframe = createIframe(id);
+//       if (typeof url == 'undefined') {
+//         return;
+//       }
 
-//       link.remove();
-//       button.remove();
-//       video.appendChild(iframe);
+//       if (!isLoading) {
+//         isLoading = true;
+//         $('.spinning-wheel').show();
+//         $.get(url, function (content) {
+//           $('.item-cards').append(content);
+//           $('.spinning-wheel').hide();
+//           isLoading = false;
+//         });
+//         $next.parent().remove();
+//       }
+//     }
 //   });
 
-//   link.removeAttribute('href');
-//   video.classList.add('video--enabled');
-// }
-
-// function parseMediaURL(media) {
-//   let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
-//   let url = media.src;
-//   let match = url.match(regexp);
-
-//   return match[1];
-// }
-
-// function createIframe(id) {
-//   let iframe = document.createElement('iframe');
-
-//   iframe.setAttribute('allowfullscreen', '');
-//   iframe.setAttribute('allow', 'autoplay');
-//   iframe.setAttribute('src', generateURL(id));
-//   iframe.classList.add('video__media');
-
-//   return iframe;
-// }
-
-// function generateURL(id) {
-//   let query = '?rel=0&showinfo=0&autoplay=1';
-
-//   return 'https://www.youtube.com/embed/' + id + query;
-// }
-
-// findVideos();
-
-var elem = document.querySelector(".gallery__row");
-var msnry = new Masonry(elem, {
-	// options
-	itemSelector: ".gallery__col",
-	columnWidth: 200,
-	columnWidth: ".gallery__col",
-	// gutter: 26,
-});
-
-// element argument can be a selector string
-//   for an individual element
-// var msnry = new Masonry( '.grid', {
-//   // options
 // });
+const galleryLinks = document.querySelectorAll('.gallery__item');
+
+const checkSrc = () => {
+
+  galleryLinks.forEach((link) => {
+
+    const src = link.getAttribute('href');
+    link.getAttribute('src');
+    if (!src) {
+      // console.log('img src is empty');
+      link.style.display = "none";
+    } else {
+      link.style.display = "block";
+    }
+  })
+}
+
+checkSrc();

@@ -84,7 +84,7 @@
   }
 
   &__title {
-    max-width: 430px;
+    max-width: 530px;
 
     @include d(767) {
       max-width: 100%;
@@ -93,11 +93,14 @@
     p {
       max-width: 400px;
       margin-bottom: 49px;
-
+      &:not(:first-of-type) {
+        display: none;
+      }
       @include d(767) {
         max-width: 100%;
         margin-bottom: 32px;
       }
+      
     }
   }
 
