@@ -24,19 +24,60 @@ const toggleMenu = () => {
 toggleMenu();
 
 
+const addInnerPageClass = () => {
+  const innerClass = document.querySelector(".js-innerPage");
+  const wrapper = document.querySelector(".wrapper");
+
+  if (innerClass) {
+    wrapper.classList.add("inner-page");
+  }
+}
+
+addInnerPageClass();
+
+
+// const slider = new Swiper(".swiper", {
+//   grabCursor: false,
+//   loop: true,
+//   spaceBetween: 12,
+//   slidesPerView: 3,
+//   freeMode: true,
+//   allowTouchMove: false,
+//   noSwiping: true,
+//   speed: 20000,
+//   freeModeMomentum: false,
+//   autoplay: {
+//     delay: 0,
+//     disableOnInteraction: true,
+//   },
+//   breakpoints: {
+//     992: {
+//       slidesPerView: 4.33,
+//       spaceBetween: 30
+//     },
+//   }
+// });
+
 const slider = new Swiper(".partners-slider", {
-  grabCursor: true,
+  grabCursor: false,
   loop: true,
-  // spaceBetween: 60,
+  // spaceBetween: 0,
   // slidesPerView: 7,
-  freeMode: false,
-  allowTouchMove: true,
+  // freeMode: true,
+  // allowTouchMove: false,
+  // noSwiping: true,
+  speed: 1000,
+  // freeModeMomentum: false,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
   // noSwiping: true,
-  speed: 500,
+  // speed: 500,
   // freeModeMomentum: false,
   // autoplay: {
   // delay: 0,
@@ -62,80 +103,70 @@ const slider = new Swiper(".partners-slider", {
   }
 });
 
+if (document.querySelector('.videos')) {
+  fsLightboxInstances["first-lightbox"].props.onOpen = function () {
+    // console.log("The first lightbox has opened.");
+  }
+  fsLightboxInstances["second-lightbox"].props.onOpen = function () {
+    // console.log("The second lightbox has opened.");
+  }
+}
 
-// load latest video from youtube
+const menuLinks = document.querySelectorAll(".nav-list__link");
 
-// const loadVideo = (iframe) => {
-//   const cid = "UCgJJY_sxYWgwwZYdhI-LCqg";
-//   const channelURL = encodeURIComponent(`https://www.youtube.com/feeds/videos.xml?channel_id=${cid}`)
-//   const reqURL = `https://api.rss2json.com/v1/api.json?rss_url=${channelURL}`;
+menuLinks.forEach((menuLink) => {
+  menuLink.addEventListener("click", function (e) {
+    if (e.target.href.indexOf('/instructor') != -1) {
+      e.preventDefault();
+      window.open('/julius#instructorSection', '_self');
+    }
+  })
+});
 
-//   fetch(reqURL)
-//     .then(response => response.json())
-//     .then(result => {
-//       console.log(result)
-//       const videoNumber = iframe.getAttribute('data-video')
-//       const link = result.items[videoNumber].link;
-//       const id = link.substr(link.indexOf("=") + 1);
-//       iframe.setAttribute("src", `https://youtube.com/embed/${id}?controls=1&showinfo=0&autohide=1&autoplay=0`);
-//     })
-//     .catch(error => console.log('error', error));
-// }
 
-// const iframes = document.getElementsByClassName('latestVideoEmbed');
-// for (let i = 0, len = iframes.length; i < len; i++) {
-//   loadVideo(iframes[i]);
-// }
+// $(document).ready(function () {
 
-// function findVideos() {
-//   let videos = document.querySelectorAll('.video');
+//   var isLoading = false;
+//   $('.spinning-wheel').hide();
 
-//   for (let i = 0; i < videos.length; i++) {
-//       setupVideo(videos[i]);
-//   }
-// }
+//   $(window).scroll(function () {
+//     if ($(window).scrollTop() + $(window).height() >= $(document).height() - 300) {
+//       var $next = $('a[rel=next]');
+//       var url = $next.attr('href');
 
-// function setupVideo(video) {
-//   let link = video.querySelector('.video__link');
-//   let media = video.querySelector('.video__media');
-//   let button = video.querySelector('.video__button');
-//   let id = parseMediaURL(media);
+//       if (typeof url == 'undefined') {
+//         return;
+//       }
 
-//   video.addEventListener('click', () => {
-//       let iframe = createIframe(id);
-
-//       link.remove();
-//       button.remove();
-//       video.appendChild(iframe);
+//       if (!isLoading) {
+//         isLoading = true;
+//         $('.spinning-wheel').show();
+//         $.get(url, function (content) {
+//           $('.item-cards').append(content);
+//           $('.spinning-wheel').hide();
+//           isLoading = false;
+//         });
+//         $next.parent().remove();
+//       }
+//     }
 //   });
 
-//   link.removeAttribute('href');
-//   video.classList.add('video--enabled');
-// }
+// });
+const galleryLinks = document.querySelectorAll('.gallery__item');
 
-// function parseMediaURL(media) {
-//   let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
-//   let url = media.src;
-//   let match = url.match(regexp);
+const checkSrc = () => {
 
-//   return match[1];
-// }
+  galleryLinks.forEach((link) => {
 
-// function createIframe(id) {
-//   let iframe = document.createElement('iframe');
+    const src = link.getAttribute('href');
+    link.getAttribute('src');
+    if (!src) {
+      // console.log('img src is empty');
+      link.style.display = "none";
+    } else {
+      link.style.display = "block";
+    }
+  })
+}
 
-//   iframe.setAttribute('allowfullscreen', '');
-//   iframe.setAttribute('allow', 'autoplay');
-//   iframe.setAttribute('src', generateURL(id));
-//   iframe.classList.add('video__media');
-
-//   return iframe;
-// }
-
-// function generateURL(id) {
-//   let query = '?rel=0&showinfo=0&autoplay=1';
-
-//   return 'https://www.youtube.com/embed/' + id + query;
-// }
-
-// findVideos();
+checkSrc();

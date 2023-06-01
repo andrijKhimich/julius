@@ -93,7 +93,6 @@
                 </div>
               </div>
               <div class="partners-slider__btns">
-                <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev">
                   <svg class="slider-btn">
                     <use xlink:href="img/sprite-svg/sprite.svg#prev"></use>
@@ -136,12 +135,13 @@
                   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
                     massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
                     quam felis…</p>
-                  <a href="./article.html" class="link link_sm" aria-label="News link">weiter lesen
-                    <svg class="icon-arrow">
-                      <use xlink:href="img/sprite-svg/sprite.svg#arrow"></use>
-                    </svg>
-                  </a>
+
                 </div>
+                <a href="./article.html" class="link link_sm" aria-label="News link">weiter lesen
+                  <svg class="icon-arrow">
+                    <use xlink:href="img/sprite-svg/sprite.svg#arrow"></use>
+                  </svg>
+                </a>
               </div>
             </div>
             <div class="col-md-6 col-lg-4">
@@ -155,12 +155,13 @@
                   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
                     massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
                     quam felis…</p>
-                  <a href="./article.html" class="link link_sm" aria-label="News link">weiter lesen
-                    <svg class="icon-arrow">
-                      <use xlink:href="img/sprite-svg/sprite.svg#arrow"></use>
-                    </svg>
-                  </a>
+
                 </div>
+                <a href="./article.html" class="link link_sm" aria-label="News link">weiter lesen
+                  <svg class="icon-arrow">
+                    <use xlink:href="img/sprite-svg/sprite.svg#arrow"></use>
+                  </svg>
+                </a>
               </div>
             </div>
             <div class="col-md-6 col-lg-4">
@@ -174,12 +175,13 @@
                   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
                     massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
                     quam felis…</p>
-                  <a href="./article.html" class="link link_sm" aria-label="News link">weiter lesen
-                    <svg class="icon-arrow">
-                      <use xlink:href="img/sprite-svg/sprite.svg#arrow"></use>
-                    </svg>
-                  </a>
+
                 </div>
+                <a href="./article.html" class="link link_sm" aria-label="News link">weiter lesen
+                  <svg class="icon-arrow">
+                    <use xlink:href="img/sprite-svg/sprite.svg#arrow"></use>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
@@ -244,32 +246,48 @@
             </div>
             <div class="col-md-4">
               <div class="videos__item">
-                <iframe class="latestVideoEmbed" title="video" name="video" data-video='0' allowfullscreen></iframe>
-                <a href="#" class="play" aria-label="video link">
+                <!-- <iframe class="latestVideoEmbed" title="video" name="video" data-video='0' allowfullscreen></iframe> -->
+                <a href="video/video.mp4" data-fslightbox="first-lightbox" class="play" aria-label="video link">
                   <svg class="icon-play">
                     <use xlink:href="img/sprite-svg/sprite.svg#play"></use>
                   </svg>
                 </a>
+                <video data-lightbox="video">
+                  <source src="video/video.mp4" type="video/mp4">
+                  <!-- <source src="movie.ogg" type="video/ogg"> -->
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
             <div class="col-md-4">
               <div class="videos__item">
-                <iframe class="latestVideoEmbed" title="video" name="video" data-video='1' allowfullscreen></iframe>
-                <a href="#" class="play" aria-label="video link">
+                <!-- <iframe class="latestVideoEmbed" title="video" name="video" data-video='1' allowfullscreen></iframe> -->
+                <a href="video/video.mp4" data-fslightbox="first-lightbox" class="play" aria-label="video link">
                   <svg class="icon-play">
                     <use xlink:href="img/sprite-svg/sprite.svg#play"></use>
                   </svg>
                 </a>
+                <video data-lightbox="video">
+                  <source src="video/video.mp4" type="video/mp4">
+                  <!-- <source src="movie.ogg" type="video/ogg"> -->
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
             <div class="col-md-4">
               <div class="videos__item">
-                <iframe class="latestVideoEmbed" title="video" name="video" data-video='2' allowfullscreen></iframe>
-                <a href="#" class="play" aria-label="video link">
+
+                <!-- <iframe class="latestVideoEmbed" title="video" name="video" data-video='2' allowfullscreen></iframe> -->
+                <a href="video/video.mp4" data-fslightbox="first-lightbox" class="play" aria-label="video link">
                   <svg class="icon-play">
                     <use xlink:href="img/sprite-svg/sprite.svg#play"></use>
                   </svg>
                 </a>
+                <video data-lightbox="video">
+                  <source src="video/video.mp4" type="video/mp4">
+                  <!-- <source src="movie.ogg" type="video/ogg"> -->
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
           </div>
@@ -291,44 +309,44 @@
           </div>
           <div class="media__row">
             <div class="media__col">
-              <div class="media__item">
+              <a href="./img/home/media-1.webp" data-fslightbox="second-lightbox" class="media__item">
                 <img src="./img/home/media-1.webp" alt="media" loading="lazy">
-              </div>
+              </a>
             </div>
             <div class="media__col">
-              <div class="media__item">
-                <img src="./img/home/media-2.webp" alt="media" loading="lazy">
-              </div>
+              <a href="./img/home/media-1.webp" data-fslightbox="second-lightbox" class="media__item">
+                <img src="./img/home/media-1.webp" alt="media" loading="lazy">
+              </a>
             </div>
             <div class="media__col">
-              <div class="media__item">
-                <img src="./img/home/media-3.webp" alt="media" loading="lazy">
-              </div>
+              <a href="./img/home/media-1.webp" data-fslightbox="second-lightbox" class="media__item">
+                <img src="./img/home/media-1.webp" alt="media" loading="lazy">
+              </a>
             </div>
             <div class="media__col">
-              <div class="media__item">
-                <img src="./img/home/media-4.webp" alt="media" loading="lazy">
-              </div>
+              <a href="./img/home/media-1.webp" data-fslightbox="second-lightbox" class="media__item">
+                <img src="./img/home/media-1.webp" alt="media" loading="lazy">
+              </a>
             </div>
             <div class="media__col">
-              <div class="media__item">
-                <img src="./img/home/media-5.webp" alt="media" loading="lazy">
-              </div>
+              <a href="./img/home/media-1.webp" data-fslightbox="second-lightbox" class="media__item">
+                <img src="./img/home/media-1.webp" alt="media" loading="lazy">
+              </a>
             </div>
             <div class="media__col">
-              <div class="media__item">
-                <img src="./img/home/media-6.webp" alt="media" loading="lazy">
-              </div>
+              <a href="./img/home/media-1.webp" data-fslightbox="second-lightbox" class="media__item">
+                <img src="./img/home/media-1.webp" alt="media" loading="lazy">
+              </a>
             </div>
             <div class="media__col">
-              <div class="media__item">
-                <img src="./img/home/media-7.webp" alt="media" loading="lazy">
-              </div>
+              <a href="./img/home/media-1.webp" data-fslightbox="second-lightbox" class="media__item">
+                <img src="./img/home/media-1.webp" alt="media" loading="lazy">
+              </a>
             </div>
             <div class="media__col">
-              <div class="media__item">
-                <img src="./img/home/media-8.webp" alt="media" loading="lazy">
-              </div>
+              <a href="./img/home/media-1.webp" data-fslightbox="second-lightbox" class="media__item">
+                <img src="./img/home/media-1.webp" alt="media" loading="lazy">
+              </a>
             </div>
           </div>
         </div>

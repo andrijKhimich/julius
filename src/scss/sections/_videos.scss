@@ -20,16 +20,19 @@
   &__item {
     height: 242px;
     position: relative;
-    background-color: tomato;
+    width: 100%;
+    // background-color: tomato;
 
     @include d(991) {
       margin-bottom: 37px;
     }
 
-    iframe {
+    video, iframe {
       width: 100%;
       height: 100%;
       border: none;
+      object-fit: cover;
+      z-index: -1;
     }
   }
 
@@ -49,14 +52,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  pointer-events: none;
+  z-index: 10;
+  // pointer-events: none;
 
   &:hover {
     background-color: $primaryDark;
-
-    // .icon-play {
-    //   transform: scale(1.05);
-    // }
   }
 }
 
@@ -129,4 +129,37 @@
 
 .video--enabled .video__button {
   display: block;
+}
+
+
+a[href$=".mp4"], a[href^="https://www.youtube.com/embed"] {
+  position: relative;
+  width: 100%;
+
+  &::before {
+    content: "";
+    background-image: url(../images/play.svg);
+    background-repeat: no-repeat;
+    background-position: 60% center;
+    width: 80px;
+    height: 80px;
+    background-color: $primaryLight;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color $hover-duration $timing;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    // pointer-events: none;
+  }
+
+  &:hover {
+    &::before {
+      background-color: $primaryDark;
+    }
+  }
 }

@@ -16,10 +16,10 @@
 </head>
 
 <body>
-  <div class="wrapper inner-page">
+  <div class="wrapper">
     @@include("./html/_header.html")
     <main class="main">
-      <section class="news news-page">
+      <section class="news news-page js-innerPage">
         <div class="container">
           <div class="row">
             <div class="col-12">
@@ -31,62 +31,72 @@
           <div class="row">
             <div class="col-12">
               <div class="gallery__row">
-                <div class="gallery__col _1">
-                  <div class="gallery__item">
-                    <img src="./img/media/media-1.webp" alt="media">
-                  </div>
+                <div class="gallery__col">
+                  <a href="./video/video.mp4" class="gallery__item">
+                    <img src="./img/media/media-1.mp4" alt="media">
+                    <!-- <span href="video/video.mp4" data-fslightbox class="play" aria-label="video link">
+                      <svg class="icon-play">
+                        <use xlink:href="img/sprite-svg/sprite.svg#play"></use>
+                      </svg>
+                    </span> -->
+                    <video autoplay muted loop>
+                      <source src="./video/video.mp4" type="video/mp4">
+                      <!-- <source src="movie.ogg" type="video/ogg"> -->
+                      Your browser does not support the video tag.
+                    </video>
+                  </a>
                 </div>
-                <div class="gallery__col _2">
+                <div class="gallery__col">
                   <div class="gallery__item">
                     <img src="./img/media/media-2.webp" alt="media">
                   </div>
                 </div>
-                <div class="gallery__col _3">
+                <div class="gallery__col">
                   <div class="gallery__item">
                     <img src="./img/media/media-3.webp" alt="media">
                   </div>
                 </div>
-                <div class="gallery__col _4">
+                <div class="gallery__col">
                   <div class="gallery__item">
                     <img src="./img/media/media-4.webp" alt="media">
                   </div>
                 </div>
-                <div class="gallery__col _5">
+                <div class="gallery__col">
                   <div class="gallery__item">
                     <img src="./img/media/media-5.webp" alt="media">
                   </div>
                 </div>
-                <div class="gallery__col _6">
+                <div class="gallery__col">
                   <div class="gallery__item">
                     <img src="./img/media/media-6.webp" alt="media">
                   </div>
                 </div>
-                <div class="gallery__col _7">
+                <div class="gallery__col">
                   <div class="gallery__item">
                     <img src="./img/media/media-7.webp" alt="media">
                   </div>
                 </div>
-                <div class="gallery__col _8">
+                <div class="gallery__col">
                   <div class="gallery__item">
                     <img src="./img/media/media-8.webp" alt="media">
                   </div>
                 </div>
-                <div class="gallery__col _9">
+                <div class="gallery__col">
                   <div class="gallery__item">
                     <img src="./img/media/media-9.webp" alt="media">
                   </div>
                 </div>
-                <div class="gallery__col _10">
+                <div class="gallery__col">
                   <div class="gallery__item">
                     <img src="./img/media/media-10.webp" alt="media">
                   </div>
                 </div>
-                <div class="gallery__col _11">
+                <div class="gallery__col">
                   <div class="gallery__item">
                     <img src="./img/media/media-11.webp" alt="media">
                   </div>
                 </div>
-                <div class="gallery__col _12">
+                <div class="gallery__col">
                   <div class="gallery__item">
                     <img src="./img/media/media-12.webp" alt="media">
                   </div>

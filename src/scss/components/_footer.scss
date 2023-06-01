@@ -23,13 +23,15 @@
     @include d(1440) {
       width: 10%;
     }
-
-    // mix-blend-mode: multiply;
   }
 
   &__logo {
     max-width: 226px;
     margin-bottom: 5px;
+
+    img {
+      height: 34px;
+    }
   }
 
   &__box {
