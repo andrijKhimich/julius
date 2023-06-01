@@ -1,0 +1,298 @@
+// header
+.header {
+  padding: 61px 0 52px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  font-size: 20px;
+  text-transform: uppercase;
+  z-index: 20;
+  color: $primaryDark;
+
+  @include d(1800) {
+    padding: 40px 0;
+  }
+
+  @include d(1440) {
+    padding: 25px 0;
+    font-size: 18px;
+  }
+
+  @include d(991) {
+    color: $white;
+    font-size: 22px;
+  }
+
+  &-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+
+    @include d(991) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: $primary;
+      pointer-events: none;
+      opacity: 0;
+      padding-left: 23px;
+      flex-direction: column;
+      align-items: flex-start;
+      transform: translateX(-20px);
+      transition: opacity .5s ease-out, transform .5s ease-out;
+
+      &.active {
+        opacity: 1;
+        pointer-events: initial;
+        transform: translateX(0);
+      }
+
+      .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 90px 0 0 0;
+        justify-content: flex-start;
+        // font-size: 18px;
+      }
+    }
+  }
+
+  &__social {
+    .social-list__item {}
+
+    @include d(991) {
+      .icon-social {
+        fill: $white;
+      }
+    }
+
+  }
+}
+
+.logo {
+  display: inline-block;
+  max-width: 343px;
+  flex: 0 0 343px;
+  position: relative;
+  z-index: 1;
+
+  @include d(1800) {
+    max-width: 310px;
+    flex: 0 0 310px;
+  }
+
+  @include d(1440) {
+    max-width: 240px;
+    flex: 0 0 240px;
+  }
+
+  @include d(400) {
+    max-width: 200px;
+    flex: 0 0 200px;
+  }
+}
+
+.nav {
+  margin-right: 47px;
+
+  @include d(1024) {
+    margin-right: 10px;
+  }
+
+  @include d(991) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  &-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__item,
+    li {
+      &:not(:last-child) {
+        margin-right: 52px;
+
+        @include d(1800) {
+          margin-right: 25px;
+        }
+
+        @include d(1440) {
+          margin-right: 33px;
+        }
+
+        @include d(1366) {
+          margin-right: 24px;
+        }
+
+        @include d(1280) {
+          margin-right: 21px;
+        }
+
+        @include d(1199) {
+          margin-right: 10px;
+        }
+
+        @include d(1024) {
+          margin-right: 3px;
+        }
+
+        @include d(991) {
+          margin-right: 0;
+          margin-bottom: 5px;
+        }
+      }
+
+      &:nth-child(-n + 2) {
+        color: $white;
+
+        .nav-list__link {
+          &::before {
+            border-color: $white;
+          }
+        }
+
+      }
+    }
+
+    &__link,
+    a {
+      padding: 25px 12px;
+      position: relative;
+      transition: color $hover-duration $timing;
+
+      @include d(1440) {
+        padding: 20px 10px;
+      }
+
+      &::before {
+        content: "";
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border: 2px solid $primaryDark;
+        background-color: transparent;
+        transition: opacity $hover-duration $timing;
+
+      }
+
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+      }
+
+      @include d(1440) {
+        padding: 5px;
+      }
+
+      @include d(991) {
+        padding: 5px 5px 5px 0;
+      }
+    }
+  }
+}
+
+.burger {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  z-index: 101;
+  display: none;
+  padding: 8px;
+  border: 1px solid $primary;
+
+  @include d(991) {
+    display: inline-block;
+  }
+
+  @include d(767) {
+    border-color: $white;
+  }
+
+  &_item {
+    position: absolute;
+    width: 22px;
+    height: 4px;
+    background-color: $primary;
+    left: 8px;
+    transition: .4s ease-out;
+    border-radius: 4px;
+
+    @include d(767) {
+      background-color: $white;
+    }
+
+    &:first-child {
+      top: 8px;
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+      margin-top: -2px;
+    }
+
+    &:last-child {
+      bottom: 8px;
+    }
+  }
+
+  &.active {
+    border-color: transparent;
+
+    .burger_item {
+      background-color: $white;
+
+      &:first-child {
+
+        transform: rotate(45deg);
+        top: 16px;
+      }
+
+      &:nth-child(2) {
+        width: 0;
+      }
+
+      &:last-child {
+        transform: rotate(-45deg);
+        bottom: 16px;
+      }
+    }
+  }
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      .icon-social {
+        fill: $primaryLight;
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.instructor {
+  &-hero {
+    background-color: $primary;
+    color: $white;
+    padding: 125px 0 93px;
+    position: relative;
+
+    @include d(1800) {
+      padding: 100px 0 60px;
+    }
+
+    @include d(991) {
+      padding: 100px 0 0 0;
+    }
+
+    @include d(767) {
+      padding: 50px 0 0 0;
+    }
+
+    &__content {
+      position: relative;
+      z-index: 1;
+
+      h1 {
+        margin-bottom: 40px;
+
+        @include d(1440) {
+          margin-bottom: 30px;
+        }
+      }
+
+      p {
+        margin-bottom: 60px;
+
+        @include d(1440) {
+          margin-bottom: 40px;
+        }
+      }
+
+      @include d(991) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__table {
+      table {
+        tr {
+          td {
+            &:first-child {
+              padding-right: 21px;
+            }
+          }
+        }
+      }
+    }
+
+    &__img {
+      display: none;
+
+      @include d(991) {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: block;
+        margin: 0 auto;
+        max-width: 40%;
+      }
+
+      @include d(860) {
+        max-width: 50%;
+      }
+
+      @include d(767) {
+        position: relative;
+        right: -40px;
+      }
+      @include d(575) {
+        max-width: 90%;
+        right: -20px;
+      }
+    }
+  }
+}

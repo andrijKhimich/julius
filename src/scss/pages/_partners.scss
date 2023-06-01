@@ -1,0 +1,102 @@
+.partners {
+  &-hero {
+    background-color: $primary;
+    color: $white;
+    padding: 125px 0 42px;
+    position: relative;
+
+    @include d(991) {
+      padding: 100px 0 0 0;
+    }
+
+    @include d(767) {
+      padding: 50px 0 0 0;
+    }
+
+    &__content {
+      position: relative;
+      z-index: 1;
+
+      h1 {
+        margin-bottom: 40px;
+      }
+
+      p {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      max-width: 54vw;
+
+      @include d(991) {
+        position: static;
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -12px;
+  }
+
+  &__col {
+    flex: 0 0 20%;
+    padding: 0 12px;
+    margin-bottom: 29px;
+
+    @include d(1024) {
+      flex: 0 0 25%;
+    }
+
+    @include d(991) {
+      flex: 0 0 33.333%;
+    }
+
+    @include d(767) {
+      flex: 0 0 50%;
+    }
+    @include d(400) {
+      flex: 0 0 100%;
+    }
+  }
+
+  &__item {
+    height: 180px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 38px 48px;
+    position: relative;
+    transform: scale(1);
+    transition: transform $hover-duration $timing;
+
+    &:hover {
+      transform: scale(1.08);
+    }
+
+    img {
+      max-width: 188px;
+
+      @include d(1024) {
+        height: 74px;
+        object-fit: contain;
+      }
+    }
+    @include d(1024) {
+      height: 130px;
+
+    }
+    @include d(767) {
+      padding: 20px 25px;
+    }
+  }
+}

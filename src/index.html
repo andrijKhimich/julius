@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="de">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Julius Tannert">
+  <!-- favicons -->
+  <link rel="icon" href="img/favicon/favicon.ico" sizes="any"><!-- 32×32 -->
+  <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
+  <!-- main styles -->
+  <link rel="stylesheet" href="./css/style.min.css">
+  <title>Julius Tannert</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    @@include("./html/_header.html")
+    <main class="main">
+      <section class="hero">
+        <div class="hero__video">
+          <video autoplay muted loop>
+            <source src="video/video.mp4" type="video/mp4">
+            <!-- <source src="movie.ogg" type="video/ogg"> -->
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="hero__content">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="hero__title">
+                  <h1 class="title-1">Julius startet in der DRM 2023</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                    massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
+                    quam felis…</p>
+                  <a href="./news.html" class="btn" aria-label="News link">
+                    News
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="hero__description">
+                  <p> Rallye-Pilot & Fahrtrainer</p>
+                  <p>Benzin im Blut - Leidenschaft im Herzen</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__img">
+          <img src="./img/home/hero.webp" alt="Julius Tannert">
+        </div>
+      </section>
+      <section class="partners">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <!-- Slider main container -->
+              <div class="swiper partners-slider">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide partners-slider__item">
+                    <img src="./img/home/partner-1.webp" alt="partner" loading="lazy">
+                  </div>
+                  <div class="swiper-slide partners-slider__item">
+                    <img src="./img/home/partner-2.webp" alt="partner" loading="lazy">
+                  </div>
+                  <div class="swiper-slide partners-slider__item">
+                    <img src="./img/home/partner-3.webp" alt="partner" loading="lazy">
+                  </div>
+                  <div class="swiper-slide partners-slider__item">
+                    <img src="./img/home/partner-4.webp" alt="partner" loading="lazy">
+                  </div>
+                  <div class="swiper-slide partners-slider__item">
+                    <img src="./img/home/partner-5.webp" alt="partner" loading="lazy">
+                  </div>
+                  <div class="swiper-slide partners-slider__item">
+                    <img src="./img/home/partner-6.webp" alt="partner" loading="lazy">
+                  </div>
+                  <div class="swiper-slide partners-slider__item">
+                    <img src="./img/home/partner-7.webp" alt="partner" loading="lazy">
+                  </div>
+                  <div class="swiper-slide partners-slider__item">
+                    <img src="./img/home/partner-4.webp" alt="partner" loading="lazy">
+                  </div>
+                  <div class="swiper-slide partners-slider__item">
+                    <img src="./img/home/partner-5.webp" alt="partner" loading="lazy">
+                  </div>
+                </div>
+              </div>
+              <div class="partners-slider__btns">
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev">
+                  <svg class="slider-btn">
+                    <use xlink:href="img/sprite-svg/sprite.svg#prev"></use>
+                  </svg>
+                </div>
+                <div class="swiper-button-next">
+                  <svg class="slider-btn">
+                    <use xlink:href="img/sprite-svg/sprite.svg#next"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="news">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="section__header">
+                <h2 class="title-2 section__title">News</h2>
+                <a href="./news.html" class="link" aria-label="News link">alle News
+                  <svg class="icon-arrow">
+                    <use xlink:href="img/sprite-svg/sprite.svg#arrow"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="row news__row">
+            <div class="col-md-6 col-lg-4">
+              <div class="news-card">
+                <div class="news-card__image">
+                  <img src="./img/home/news-1.webp" alt="news" loading="lazy">
+                </div>
+                <div class="news-card__content">
+                  <span class="date">11.11.2022</span>
+                  <h3 class="title-3">Julius Tannert mit starkem
+                    Saisonabschluss</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                    massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
+                    quam felis…</p>
+                  <a href="./article.html" class="link link_sm" aria-label="News link">weiter lesen
+                    <svg class="icon-arrow">
+                      <use xlink:href="img/sprite-svg/sprite.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="news-card">
+                <div class="news-card__image">
+                  <img src="./img/home/news-2.webp" alt="news" loading="lazy">
+                </div>
+                <div class="news-card__content">
+                  <span class="date">03.10.2022</span>
+                  <h3 class="title-3">Tannert bereit für Finale in der Deutschen Rallyemeisterschaft</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                    massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
+                    quam felis…</p>
+                  <a href="./article.html" class="link link_sm" aria-label="News link">weiter lesen
+                    <svg class="icon-arrow">
+                      <use xlink:href="img/sprite-svg/sprite.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="news-card">
+                <div class="news-card__image">
+                  <img src="./img/home/news-3.webp" alt="news" loading="lazy">
+                </div>
+                <div class="news-card__content">
+                  <span class="date">04.09.2022</span>
+                  <h3 class="title-3">Angriff auf DRM-Spitze in zweiter Saisonhälfte</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                    massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
+                    quam felis…</p>
+                  <a href="./article.html" class="link link_sm" aria-label="News link">weiter lesen
+                    <svg class="icon-arrow">
+                      <use xlink:href="img/sprite-svg/sprite.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="events">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="events__content">
+                <h2 class="title-2 section__title events__title">Termine</h2>
+                <div class="events-table">
+                  <table>
+                    <tr>
+                      <td>11. - 12.06.2021</td>
+                      <td>Rallye Stemweder Berg</td>
+                    </tr>
+                    <tr>
+                      <td>20. - 21.08.2021</td>
+                      <td>Rallye Saarland-Pfalz</td>
+                    </tr>
+                    <tr>
+                      <td>11.09.2021</td>
+                      <td>Cimbern-Rallye</td>
+                    </tr>
+                    <tr>
+                      <td>15. - 16.10.2021</td>
+                      <td>3-Städte-Rallye</td>
+                    </tr>
+                    <tr>
+                      <td>29. - 30.10.2021</td>
+                      <td>AvD-Sachsen-Rallye</td>
+                    </tr>
+                    <tr>
+                      <td>10. - 11.11.2021</td>
+                      <td>Rallye Sulingen</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+            <div class="events__img">
+              <img src="./img/home/events.webp" alt="car" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="videos">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="section__header videos__header">
+                <h2 class="title-2 section__title">Youtube</h2>
+                <a href="https://www.youtube.com/@juliustannert/videos" target="_blank" class="link"
+                  aria-label="video link">alle videos
+                  <svg class="icon-arrow">
+                    <use xlink:href="img/sprite-svg/sprite.svg#arrow"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="videos__item">
+                <iframe class="latestVideoEmbed" title="video" name="video" data-video='0' allowfullscreen></iframe>
+                <a href="#" class="play" aria-label="video link">
+                  <svg class="icon-play">
+                    <use xlink:href="img/sprite-svg/sprite.svg#play"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="videos__item">
+                <iframe class="latestVideoEmbed" title="video" name="video" data-video='1' allowfullscreen></iframe>
+                <a href="#" class="play" aria-label="video link">
+                  <svg class="icon-play">
+                    <use xlink:href="img/sprite-svg/sprite.svg#play"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="videos__item">
+                <iframe class="latestVideoEmbed" title="video" name="video" data-video='2' allowfullscreen></iframe>
+                <a href="#" class="play" aria-label="video link">
+                  <svg class="icon-play">
+                    <use xlink:href="img/sprite-svg/sprite.svg#play"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="media">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="section__header media__header">
+                <h2 class="title-2 section__title">Media</h2>
+                <a href="#" target="_blank" class="link">alle medien
+                  <svg class="icon-arrow">
+                    <use xlink:href="img/sprite-svg/sprite.svg#arrow"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="media__row">
+            <div class="media__col">
+              <div class="media__item">
+                <img src="./img/home/media-1.webp" alt="media" loading="lazy">
+              </div>
+            </div>
+            <div class="media__col">
+              <div class="media__item">
+                <img src="./img/home/media-2.webp" alt="media" loading="lazy">
+              </div>
+            </div>
+            <div class="media__col">
+              <div class="media__item">
+                <img src="./img/home/media-3.webp" alt="media" loading="lazy">
+              </div>
+            </div>
+            <div class="media__col">
+              <div class="media__item">
+                <img src="./img/home/media-4.webp" alt="media" loading="lazy">
+              </div>
+            </div>
+            <div class="media__col">
+              <div class="media__item">
+                <img src="./img/home/media-5.webp" alt="media" loading="lazy">
+              </div>
+            </div>
+            <div class="media__col">
+              <div class="media__item">
+                <img src="./img/home/media-6.webp" alt="media" loading="lazy">
+              </div>
+            </div>
+            <div class="media__col">
+              <div class="media__item">
+                <img src="./img/home/media-7.webp" alt="media" loading="lazy">
+              </div>
+            </div>
+            <div class="media__col">
+              <div class="media__item">
+                <img src="./img/home/media-8.webp" alt="media" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include("./html/_footer.html")
+  </div>
+
+  <script src="./js/libs.min.js"></script>
+  <script src="./js/script.min.js"></script>
+</body>
+
+</html>
