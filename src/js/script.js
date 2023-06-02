@@ -183,21 +183,43 @@ const checkSrc = () => {
 // 	msnry.masonry("layout");
 // });
 
+// var grid = document.querySelector(".gallery__row");
+// if (grid) {
+// 	var msnry;
+
+// 	imagesLoaded(grid, function () {
+// 		// init Isotope after all images have loaded
+// 		msnry = new Masonry(grid, {
+// 			itemSelector: ".gallery__col",
+// 			columnWidth: ".gallery__col",
+// 			percentPosition: true,
+// 		});
+// 		const videos = document.querySelectorAll("video");
+// 		videos.forEach(video => {
+// 			video.removeAttribute("controls");
+// 		});
+// 	});
+// }
+
+// external js: masonry.pkgd.js, imagesloaded.pkgd.js
+
+// init Masonry
 var grid = document.querySelector(".gallery__row");
 if (grid) {
-	var msnry;
+	var msnry = new Masonry(grid, {
+		itemSelector: ".gallery__col",
+		columnWidth: ".gallery__col",
+		percentPosition: true,
+	});
 
-	imagesLoaded(grid, function () {
-		// init Isotope after all images have loaded
-		msnry = new Masonry(grid, {
-			itemSelector: ".gallery__col",
-			columnWidth: ".gallery__col",
-			percentPosition: true,
-		});
+	imagesLoaded(grid).on("progress", function () {
+		// layout Masonry after each image loads
+		msnry.layout();
 		const videos = document.querySelectorAll("video");
 		videos.forEach(video => {
 			video.removeAttribute("controls");
 		});
+		checkSrc();
 	});
 }
 
