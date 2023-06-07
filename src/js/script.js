@@ -34,82 +34,55 @@ const addInnerPageClass = () => {
 
 addInnerPageClass();
 
-// const slider = new Swiper(".swiper", {
-//   grabCursor: false,
-//   loop: true,
-//   spaceBetween: 12,
-//   slidesPerView: 3,
-//   freeMode: true,
-//   allowTouchMove: false,
-//   noSwiping: true,
-//   speed: 20000,
-//   freeModeMomentum: false,
-//   autoplay: {
-//     delay: 0,
-//     disableOnInteraction: true,
-//   },
-//   breakpoints: {
-//     992: {
-//       slidesPerView: 4.33,
-//       spaceBetween: 30
-//     },
-//   }
-// });
-
-const slider = new Swiper(".partners-slider", {
-	grabCursor: false,
-	loop: true,
-	// spaceBetween: 0,
-	// slidesPerView: 7,
-	// freeMode: true,
-	// allowTouchMove: false,
-	// noSwiping: true,
-	speed: 1000,
-	// freeModeMomentum: false,
-	autoplay: {
-		delay: 3000,
-		disableOnInteraction: false,
-	},
-	navigation: {
-		nextEl: ".swiper-button-next",
-		prevEl: ".swiper-button-prev",
-	},
-	// noSwiping: true,
-	// speed: 500,
-	// freeModeMomentum: false,
-	// autoplay: {
-	// delay: 0,
-	// disableOnInteraction: true,
-	// },
-	breakpoints: {
-		992: {
-			slidesPerView: 7,
-			spaceBetween: 60,
+const partnersSlider = document.querySelector(".partners-slider");
+if (partnersSlider) {
+	const slider = new Swiper(partnersSlider, {
+		grabCursor: false,
+		loop: true,
+		speed: 1000,
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
 		},
-		767: {
-			slidesPerView: 6,
-			spaceBetween: 30,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
 		},
-		575: {
-			slidesPerView: 5,
-			spaceBetween: 30,
+		breakpoints: {
+			992: {
+				slidesPerView: 7,
+				spaceBetween: 60,
+			},
+			767: {
+				slidesPerView: 6,
+				spaceBetween: 30,
+			},
+			575: {
+				slidesPerView: 5,
+				spaceBetween: 30,
+			},
+			320: {
+				slidesPerView: 3,
+				spaceBetween: 30,
+			},
 		},
-		320: {
-			slidesPerView: 3,
-			spaceBetween: 30,
-		},
-	},
-});
-
-if (document.querySelector(".videos")) {
-	fsLightboxInstances["first-lightbox"].props.onOpen = function () {
-		// console.log("The first lightbox has opened.");
-	};
-	fsLightboxInstances["second-lightbox"].props.onOpen = function () {
-		// console.log("The second lightbox has opened.");
-	};
+	});
 }
 
+// if (document.querySelector(".videos")) {
+// 	// fsLightboxInstances["first-lightbox"].props.onOpen = function () {
+// 	// 	// console.log("The first lightbox has opened.");
+// 	// };
+// 	// fsLightboxInstances["second-lightbox"].props.onOpen = function () {
+// 	// 	// console.log("The second lightbox has opened.");
+// 	// };
+// }
+// lightbox.option({
+// 	resizeDuration: 200,
+// 	wrapAround: true,
+// 	maxWidth: 1200,
+// 	positionFromTop: 100,
+// });
 const menuLinks = document.querySelectorAll(".nav-list__link");
 
 menuLinks.forEach(menuLink => {
@@ -121,34 +94,6 @@ menuLinks.forEach(menuLink => {
 	});
 });
 
-// $(document).ready(function () {
-
-//   var isLoading = false;
-//   $('.spinning-wheel').hide();
-
-//   $(window).scroll(function () {
-//     if ($(window).scrollTop() + $(window).height() >= $(document).height() - 300) {
-//       var $next = $('a[rel=next]');
-//       var url = $next.attr('href');
-
-//       if (typeof url == 'undefined') {
-//         return;
-//       }
-
-//       if (!isLoading) {
-//         isLoading = true;
-//         $('.spinning-wheel').show();
-//         $.get(url, function (content) {
-//           $('.item-cards').append(content);
-//           $('.spinning-wheel').hide();
-//           isLoading = false;
-//         });
-//         $next.parent().remove();
-//       }
-//     }
-//   });
-
-// });
 const galleryLinks = document.querySelectorAll(".gallery__item");
 
 const checkSrc = () => {
@@ -164,45 +109,6 @@ const checkSrc = () => {
 	});
 };
 
-// checkSrc();
-
-// $(".gallery__row").masonry({
-// 	itemSelector: ".gallery__col",
-// 	columnWidth: ".gallery__col",
-// 	// gutter: 20,
-// });
-
-// var elem = document.querySelector(".gallery__row");
-// var msnry = new Masonry(elem, {
-// 	// options
-// 	itemSelector: ".gallery__col",
-// 	columnWidth: ".gallery__col",
-// });
-
-// msnry.imagesLoaded().progress(function () {
-// 	msnry.masonry("layout");
-// });
-
-// var grid = document.querySelector(".gallery__row");
-// if (grid) {
-// 	var msnry;
-
-// 	imagesLoaded(grid, function () {
-// 		// init Isotope after all images have loaded
-// 		msnry = new Masonry(grid, {
-// 			itemSelector: ".gallery__col",
-// 			columnWidth: ".gallery__col",
-// 			percentPosition: true,
-// 		});
-// 		const videos = document.querySelectorAll("video");
-// 		videos.forEach(video => {
-// 			video.removeAttribute("controls");
-// 		});
-// 	});
-// }
-
-// external js: masonry.pkgd.js, imagesloaded.pkgd.js
-
 // init Masonry
 var grid = document.querySelector(".gallery__row");
 if (grid) {
@@ -213,7 +119,6 @@ if (grid) {
 	});
 
 	imagesLoaded(grid).on("progress", function () {
-		// layout Masonry after each image loads
 		msnry.layout();
 		const videos = document.querySelectorAll("video");
 		videos.forEach(video => {
@@ -223,6 +128,109 @@ if (grid) {
 	});
 }
 
-// $grid.imagesLoaded().progress(function () {
-// 	$grid.masonry("layout");
+var gridHome = document.querySelector(".media__row");
+if (gridHome) {
+	var msnryHome = new Masonry(gridHome, {
+		itemSelector: ".media__col",
+		columnWidth: ".media__col",
+		percentPosition: true,
+	});
+
+	imagesLoaded(gridHome).on("progress", function () {
+		msnryHome.layout();
+		const videos = document.querySelectorAll("video");
+		if (videos) {
+			videos.forEach(video => {
+				video.removeAttribute("controls");
+			});
+		}
+
+		checkSrc();
+	});
+}
+
+// $(document).ready(function () {
+// 	// $(".image-link").magnificPopup({type: "image"});
+// 	$(".gallery__row").magnificPopup({
+// 		delegate: "a",
+// 		type: "image",
+// 		tLoading: "Loading image #%curr%...",
+// 		mainClass: "mfp-img-mobile",
+// 		gallery: {
+// 			enabled: true,
+// 			navigateByImgClick: true,
+// 			preload: [0, 1], // Will preload 0 - before current, and 1 after the current image
+// 		},
+// 		// image: {
+// 		// 	tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+// 		// },
+// 		callbacks: {
+// 			elementParse: function (item) {
+// 				// the class name
+// 				if (item.el.context.className == "video-link") {
+// 					item.type = "iframe";
+// 				} else {
+// 					item.type = "image";
+// 				}
+// 			},
+// 		},
+// 	});
+
+// 	$(".media__row").magnificPopup({
+// 		delegate: "a", // child items selector, by clicking on it popup will open
+// 		type: "image",
+// 		// other options
+// 		gallery: {
+// 			enabled: true,
+// 			navigateByImgClick: true,
+// 		},
+// 		callbacks: {
+// 			lazyLoad: function (item) {
+// 				console.log(item); // Magnific Popup data object that should be loaded
+// 			},
+// 		},
+// 		zoom: {
+// 			enabled: true, // By default it's false, so don't forget to enable it
+
+// 			duration: 300, // duration of the effect, in milliseconds
+// 			easing: "ease-in-out", // CSS transition easing function
+
+// 			// The "opener" function should return the element from which popup will be zoomed in
+// 			// and to which popup will be scaled down
+// 			// By defailt it looks for an image tag:
+// 			opener: function (openerElement) {
+// 				// openerElement is the element on which popup was initialized, in this case its <a> tag
+// 				// you don't need to add "opener" option if this code matches your needs, it's defailt one.
+// 				return openerElement.is("img")
+// 					? openerElement
+// 					: openerElement.find("img");
+// 			},
+// 		},
+// 	});
+
+// 	$(".videos").magnificPopup({
+// 		delegate: "a", // child items selector, by clicking on it popup will open
+// 		type: "iframe",
+// 		// other options
+// 		gallery: {
+// 			enabled: true,
+// 		},
+// 		zoom: {
+// 			enabled: true, // By default it's false, so don't forget to enable it
+
+// 			duration: 300, // duration of the effect, in milliseconds
+// 			easing: "ease-in-out", // CSS transition easing function
+
+// 			// The "opener" function should return the element from which popup will be zoomed in
+// 			// and to which popup will be scaled down
+// 			// By defailt it looks for an image tag:
+// 			opener: function (openerElement) {
+// 				// openerElement is the element on which popup was initialized, in this case its <a> tag
+// 				// you don't need to add "opener" option if this code matches your needs, it's defailt one.
+// 				return openerElement.is("img")
+// 					? openerElement
+// 					: openerElement.find("img");
+// 			},
+// 		},
+// 	});
 // });

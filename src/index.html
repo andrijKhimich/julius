@@ -11,6 +11,8 @@
 		<link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml" />
 		<!-- main styles -->
 		<link rel="stylesheet" href="./css/style.min.css" />
+		<meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+
 		<title>Julius Tannert</title>
 	</head>
 
@@ -312,49 +314,61 @@
 								</div>
 							</div>
 							<div class="col-md-4">
-								<div class="videos__item">
+								<a
+									href="https://www.youtube.com/embed/oo0F0pDQN7c"
+									data-dimbox="first-lightbox"
+									class="videos__item">
 									<iframe
+										src="https://www.youtube.com/embed/oo0F0pDQN7c"
 										class="latestVideoEmbed"
 										title="video"
 										name="video"
 										data-video="0"
 										allowfullscreen></iframe>
-									<a href="#" class="play" aria-label="video link">
+									<!-- <a href="#" class="play" aria-label="video link">
 										<svg class="icon-play">
 											<use xlink:href="img/sprite-svg/sprite.svg#play"></use>
 										</svg>
-									</a>
-								</div>
+									</a> -->
+								</a>
 							</div>
 							<div class="col-md-4">
-								<div class="videos__item">
+								<a
+									href="https://www.youtube.com/embed/oo0F0pDQN7c"
+									data-dimbox="first-lightbox"
+									class="videos__item">
 									<iframe
+										src="https://www.youtube.com/embed/oo0F0pDQN7c"
 										class="latestVideoEmbed"
 										title="video"
 										name="video"
 										data-video="1"
 										allowfullscreen></iframe>
-									<a href="#" class="play" aria-label="video link">
+									<!-- <a href="#" class="play" aria-label="video link">
 										<svg class="icon-play">
 											<use xlink:href="img/sprite-svg/sprite.svg#play"></use>
 										</svg>
-									</a>
-								</div>
+									</a> -->
+								</a>
 							</div>
 							<div class="col-md-4">
-								<div class="videos__item">
+								<a
+									href="https://www.youtube.com/embed/oo0F0pDQN7c"
+									data-dimbox="first-lightbox"
+									class="videos__item">
 									<iframe
+										src="https://www.youtube.com/embed/oo0F0pDQN7c"
 										class="latestVideoEmbed"
 										title="video"
 										name="video"
 										data-video="2"
 										allowfullscreen></iframe>
-									<a href="#" class="play" aria-label="video link">
+									<!-- <a href="#" class="play" aria-label="video link">
 										<svg class="icon-play">
 											<use xlink:href="img/sprite-svg/sprite.svg#play"></use>
 										</svg>
-									</a>
-								</div>
+									</a> -->
+								</a>
 							</div>
 						</div>
 					</div>
@@ -376,68 +390,92 @@
 						</div>
 						<div class="media__row">
 							<div class="media__col">
-								<div class="media__item">
+								<a
+									href="./img/home/media-1.webp"
+									class="media__item"
+									data-dimbox="second-lightbox">
 									<img
 										src="./img/home/media-1.webp"
 										alt="media"
 										loading="lazy" />
-								</div>
+								</a>
 							</div>
 							<div class="media__col">
-								<div class="media__item">
+								<a
+									href="./img/home/media-2.webp"
+									class="media__item"
+									data-dimbox="second-lightbox">
 									<img
 										src="./img/home/media-2.webp"
 										alt="media"
 										loading="lazy" />
-								</div>
+								</a>
 							</div>
 							<div class="media__col">
-								<div class="media__item">
+								<a
+									href="./img/home/media-3.webp"
+									class="media__item"
+									data-dimbox="second-lightbox">
 									<img
 										src="./img/home/media-3.webp"
 										alt="media"
 										loading="lazy" />
-								</div>
+								</a>
 							</div>
 							<div class="media__col">
-								<div class="media__item">
+								<a
+									href="./img/home/media-4.webp"
+									class="media__item"
+									data-dimbox="second-lightbox">
 									<img
 										src="./img/home/media-4.webp"
 										alt="media"
 										loading="lazy" />
-								</div>
+								</a>
 							</div>
 							<div class="media__col">
-								<div class="media__item">
+								<a
+									href="./img/home/media-5.webp"
+									class="media__item"
+									data-dimbox="second-lightbox">
 									<img
 										src="./img/home/media-5.webp"
 										alt="media"
 										loading="lazy" />
-								</div>
+								</a>
 							</div>
 							<div class="media__col">
-								<div class="media__item">
+								<a
+									href="./img/home/media-6.webp"
+									class="media__item"
+									data-dimbox="second-lightbox">
 									<img
 										src="./img/home/media-6.webp"
 										alt="media"
 										loading="lazy" />
-								</div>
+								</a>
 							</div>
 							<div class="media__col">
-								<div class="media__item">
+								<a
+									href="./img/home/media-7.webp"
+									class="media__item"
+									data-dimbox="second-lightbox">
 									<img
 										src="./img/home/media-7.webp"
 										alt="media"
 										loading="lazy" />
-								</div>
+								</a>
 							</div>
 							<div class="media__col">
-								<div class="media__item">
+								<a
+									href="./img/home/media-8.webp"
+									class="media__item"
+									data-dimbox="second-lightbox">
 									<img
 										src="./img/home/media-8.webp"
 										alt="media"
 										loading="lazy" />
-								</div>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -445,6 +483,8 @@
 			</main>
 			@@include("./html/_footer.html")
 		</div>
+		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+		<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
 
 		<script src="./js/libs.min.js"></script>
 		<script src="./js/script.min.js"></script>
